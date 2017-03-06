@@ -60,7 +60,7 @@ def load_images():
     )
     images = map(lambda image: Artwork(get_abs_dir(image)), images)
     if len(images) > 0:
-        lgr.debug("%s images are detected" % images.count())
+        lgr.debug("%s images are detected" % len(images))
     return images
 
 
