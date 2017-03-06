@@ -47,6 +47,12 @@ class Artwork(object):
         # transparency property
         self.thumbnail_name = "%s_thumbnail.png" % artwork_full_name
 
+    def __str__(self):
+        return self.artwork_full_name
+
+    def __repr__(self):
+        return ("<Artwork: %s>" % self.artwork_full_name).encode("utf8")
+
     def move_to(self, dst_dir):
         self.image_dir = dst_dir
 
@@ -74,10 +80,25 @@ def load_images():
         show_message_box("没有找到书画文件夹，请确保该文件夹放置在U盘根目录下且被命名为images")
         return None
 
-    images = filter(
-        lambda im: im.split(".")[-1] in conf.image_formats,
-        os.listdir(image_folder)
-    )
+    # images = filter(
+    #     lambda im: im.split(".")[-1] in conf.image_formats,
+    #     os.listdir(image_folder)
+    # )
+
+    images = []
+
+    for potential_image in os.listdir(image_folder):
+        filename = os.path.basename(potential_image)
+        try:
+            artwork_name, ext = filename.split(".")
+        except ValueError:
+            continue
+
+        if ext not in conf.image_formats:
+            continue
+        elif artwork_name.endswith("cover") or artwork_name.endswith("thumbnail"):
+            continue
+        images.append(potential_image)
 
     images = map(lambda image: Artwork(get_abs_dir(image)), images)
     if len(images) > 0:
