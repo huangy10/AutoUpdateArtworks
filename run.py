@@ -17,7 +17,7 @@ from image_processing.processor import build_thumbnail
 from xml_io import create_motion_xml, get_motion_xml_path
 
 
-lgr = logging.getLogger(__name__)
+lgr = logging.getLogger("palace")
 conf = GlobalConfig()
 
 
@@ -32,6 +32,7 @@ def prepare_image_directories(program_root):
 
 
 def run(program_root):
+    lgr.debug("Script start")
     with ConfigEnvironment(conf):
         images = load_images()
         if images is None or len(images) == 0:
@@ -46,8 +47,7 @@ def run(program_root):
                 "附上封面，封面的名称应该为“名字_装裱_作者_朝代_cover.jpg”（或者png）的格式。"
             )
             return
-        print conf.history_valid
-        print conf.history_valid
+
         if not need_recreate_motion_xml(images):
             lgr.debug("No update is found.")
             return
@@ -63,6 +63,7 @@ def run(program_root):
             for image in images:
                 src_abs_path = image.image_path
                 dst_abs_path = os.path.join(daily_image_dir, image.image_name)
+                lgr.debug("Copying %s" % image.image_name)
                 shutil.copy(src_abs_path, dst_abs_path)
 
                 # copy cover if exits
@@ -71,12 +72,13 @@ def run(program_root):
                     dst_cover_abs_path = os.path.join(
                         daily_image_dir, os.path.basename(image.get_cover_path())
                     )
-
+                    lgr.debug("Find cover and copying %s" % os.path.basename(image.get_cover_path()))
                     shutil.copy(src_cover_abs_path, dst_cover_abs_path)
 
                 image.move_to(daily_image_dir)
 
                 # generate thumbnail
+                lgr.debug("Creating thumbnail")
                 build_thumbnail(image)
 
             lgr.debug("Done copying.")
@@ -85,6 +87,7 @@ def run(program_root):
             # create motion file
             create_motion_xml(images, program_root)
             # copy motion file into conf folder of the WPF program
+            lgr.debug("Moving motion.xml to WPF program folder")
             conf_dir = os.path.join(program_root, "conf")
             dst_motion_path = os.path.join(conf_dir, "motion.xml")
             if os.path.exists(dst_motion_path):
@@ -94,7 +97,7 @@ def run(program_root):
             # update conf and save history
             conf.update_history(map(lambda aw: aw.artwork_full_name, images))
 
-            lgr.debug("Done!\n")
+            lgr.debug("Done!\n\n\n")
             show_message_box("完成！")
 
 

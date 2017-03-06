@@ -4,7 +4,7 @@ import shutil
 import logging
 from conf import GlobalConfig
 
-lgr = logging.getLogger(__name__)
+lgr = logging.getLogger("palace")
 conf = GlobalConfig()
 
 

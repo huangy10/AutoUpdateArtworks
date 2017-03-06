@@ -9,7 +9,7 @@ import logging
 
 
 conf = GlobalConfig()
-lgr = logging.getLogger(__name__)
+lgr = logging.getLogger("palace")
 
 
 class Artwork(object):
@@ -117,7 +117,6 @@ def get_abs_dir(image_name):
 
 
 def need_recreate_motion_xml(images):
-    print conf.history_valid
     if not conf.history_valid:
         return True
     image_history = conf.get_history()

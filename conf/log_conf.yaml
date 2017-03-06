@@ -33,11 +33,11 @@ handlers:
         formatter: simple
         level: ERROR
 loggers:
-    default:
+    palace:
         level: DEBUG
         handlers: [error, warning, debug, console]
         propagate: no
 root:
     level: DEBUG
-    handlers: [error, warning, debug, console]
+    handlers: [console]
     propagate: yes

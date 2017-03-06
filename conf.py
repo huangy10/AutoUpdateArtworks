@@ -12,7 +12,7 @@ with open(os.path.join(BASE_DIR, "conf", "log_conf.yaml")) as f:
     log_config = yaml.load(f)
     logging.config.dictConfig(log_config)
 
-lgr = logging.getLogger(__name__)
+lgr = logging.getLogger("palace")
 
 
 class Singleton(type):
