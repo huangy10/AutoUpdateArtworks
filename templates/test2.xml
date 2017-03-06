@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf8'?>
+<doc>
+    <branch hash="1cdf045c" name="testing">
+        test, source
+    </branch>
+    <branch hash="f200013e" name="release01">
+        <sub-branch name="subrelease01">
+            xml, sgml
+        </sub-branch>
+    </branch>
+    <branch name="invalid">
+    </branch>
+<layer name="new" /><layer name="new" /></doc>
