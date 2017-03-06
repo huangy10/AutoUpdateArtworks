@@ -1,11 +1,21 @@
 global:
   U_disk_name: E
+  daily_image_folder: daily_image
   image_folder_name: images
   image_formats:
   - png
   - jpg
   skip_aw_num: 40
-history: null
+history:
+- 测试图片_卷_作者_战国
+- 测试图片_卷_作者_朝代1
+- 测试图片_卷_作者_朝代2
+- 测试图片_卷_作者_朝代3
+- 测试图片_卷_作者_朝代4
+- 测试图片_卷_作者_朝代5
+- 测试图片_卷_作者_朝代6
+- 测试图片_卷_作者_朝代7
+- 测试图片_卷_作者_朝代8
 status:
-  busy: true
-  history_valid: false
+  busy: false
+  history_valid: true

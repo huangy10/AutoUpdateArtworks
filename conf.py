@@ -35,6 +35,8 @@ class Test(object):
 
 class GlobalConfig(object):
 
+    __metaclass__ = Singleton
+
     def __init__(self):
         with open(os.path.join(BASE_DIR, "conf", "global_conf.yaml")) as f:
             try:
@@ -44,6 +46,7 @@ class GlobalConfig(object):
                 self._image_folder_name = data["image_folder_name"]
                 self._image_formats = data["image_formats"]
                 self._u_disk_name = data["U_disk_name"]
+                self._daily_image_folder = data["daily_image_folder"]
 
                 status = raw_config["status"]
                 self._busy = status["busy"]
@@ -59,6 +62,10 @@ class GlobalConfig(object):
     @property
     def skip_as_num(self):
         return self._skip_aw_num
+
+    @property
+    def daily_image_folder(self):
+        return self._daily_image_folder
 
     @property
     def image_folder_name(self):
@@ -96,7 +103,7 @@ class GlobalConfig(object):
 
     def _update(self):
         with open(os.path.join(BASE_DIR, "conf", "global_conf.yaml"), "w") as f:
-            f.write(yaml.dump(self._raw_config, default_flow_style=False))
+            f.write(yaml.dump(self._raw_config, default_flow_style=False, allow_unicode=True))
 
     def get_history(self):
         return self._history
@@ -115,13 +122,17 @@ class ConfigEnvironment(object):
 
     def __enter__(self):
         if self.conf.busy:
-            self.history_valid = False
+            self.conf.history_valid = False
         else:
             self.conf.busy = True
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.busy = False
-        self.history_valid = True
+        if exc_val:
+            print "exit with error"
+            return
+        print "normal"
+        self.conf.busy = False
+        self.conf.history_valid = True
 
 
 def show_message_box(message):

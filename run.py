@@ -8,11 +8,13 @@ import os
 import sys
 import logging
 import shutil
+import yaml
 
 from conf import GlobalConfig, ConfigEnvironment, show_message_box
 from image_loader import load_images, need_recreate_motion_xml, get_abs_dir
 from image_op import backup_images, prepare_daily_image_folder, get_daily_image_dir
 from image_processing.processor import build_thumbnail
+from xml_io import create_motion_xml, get_motion_xml_path
 
 
 lgr = logging.getLogger(__name__)
@@ -44,6 +46,8 @@ def run(program_root):
                 "附上封面，封面的名称应该为“名字_装裱_作者_朝代_cover.jpg”（或者png）的格式。"
             )
             return
+        print conf.history_valid
+        print conf.history_valid
         if not need_recreate_motion_xml(images):
             lgr.debug("No update is found.")
             return
@@ -77,6 +81,21 @@ def run(program_root):
 
             lgr.debug("Done copying.")
             lgr.debug("Creating motion.xml file")
+
+            # create motion file
+            create_motion_xml(images, program_root)
+            # copy motion file into conf folder of the WPF program
+            conf_dir = os.path.join(program_root, "conf")
+            dst_motion_path = os.path.join(conf_dir, "motion.xml")
+            if os.path.exists(dst_motion_path):
+                os.remove(dst_motion_path)
+            shutil.copy(get_motion_xml_path(program_root), dst_motion_path)
+
+            # update conf and save history
+            conf.update_history(map(lambda aw: aw.artwork_full_name, images))
+
+            lgr.debug("Done!\n")
+            show_message_box("完成！")
 
 
 if __name__ == '__main__':

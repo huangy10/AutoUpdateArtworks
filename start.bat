@@ -1,5 +1,5 @@
 set proj_base=%cd%
-set wpf_name=WpfApplication1
+set wpf_name=Debug
 set env=palace
 cd ..
 if not exist %wpf_name% (

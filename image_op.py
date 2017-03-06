@@ -14,12 +14,12 @@ def get_image_root(program_dir):
 
 def get_daily_image_dir(program_dir):
     image_root = get_image_root(program_dir)
-    return os.path.join(image_root, "daily_image")
+    return os.path.join(image_root, conf.daily_image_folder)
 
 
 def get_backup_dir(program_dir):
     image_root = get_image_root(program_dir)
-    return os.path.join(image_root, "daily_image_backup")
+    return os.path.join(image_root, "%s_backup" % conf.daily_image_folder)
 
 
 def backup_images(program_dir):

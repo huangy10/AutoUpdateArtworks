@@ -47,6 +47,8 @@ class Artwork(object):
         # transparency property
         self.thumbnail_name = "%s_thumbnail.png" % artwork_full_name
 
+        self.id = None
+
     def __str__(self):
         return self.artwork_full_name
 
@@ -61,6 +63,9 @@ class Artwork(object):
 
     def get_thumbnail_path(self):
         return os.path.join(self.image_dir, self.thumbnail_name)
+
+    def get_detail_path(self):
+        return os.path.join(self.image_dir, self.image_name)
 
 
 def get_image_folder():
@@ -112,11 +117,12 @@ def get_abs_dir(image_name):
 
 
 def need_recreate_motion_xml(images):
+    print conf.history_valid
     if not conf.history_valid:
         return True
     image_history = conf.get_history()
 
-    if len(image_history) != len(images):
+    if image_history is not None and len(image_history) != len(images):
         return True
 
     for image in images:
