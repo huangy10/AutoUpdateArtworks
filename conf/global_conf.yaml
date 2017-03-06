@@ -5,7 +5,7 @@ global:
   - png
   - jpg
   skip_aw_num: 40
+history: null
 status:
-  busy: false
+  busy: true
   history_valid: false
-history:

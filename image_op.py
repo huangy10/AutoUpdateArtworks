@@ -50,3 +50,7 @@ def prepare_daily_image_folder(program_dir):
 
     os.makedirs(daily_image_dir)
     return True
+
+
+def restore_backup(program_dir):
+    pass

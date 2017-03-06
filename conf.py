@@ -127,4 +127,4 @@ class ConfigEnvironment(object):
 def show_message_box(message):
     if sys.platform == "win32":
         import ctypes
-        ctypes.windll.user32.MessageBoxW(0, "书画鉴赏", message, 1)
+        ctypes.windll.user32.MessageBoxW(0, message, "书画鉴赏", 1)
