@@ -1,5 +1,7 @@
+# coding=utf-8
 from __future__ import unicode_literals
 import os
+import sys
 import yaml
 import logging.config
 
@@ -120,3 +122,9 @@ class ConfigEnvironment(object):
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.busy = False
         self.history_valid = True
+
+
+def show_message_box(message):
+    if sys.platform == "win32":
+        import ctypes
+        ctypes.windll.user32.MessageBoxW(0, "书画鉴赏", message, 1)

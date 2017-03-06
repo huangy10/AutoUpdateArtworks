@@ -30,7 +30,7 @@ def prepare_image_directories(program_root):
 def run(program_root):
     with ConfigEnvironment(conf):
         images = load_images()
-        if images is None:
+        if images is None or len(images) == 0:
             return
         if not need_recreate_motion_xml(images):
             lgr.debug("No update is found.")

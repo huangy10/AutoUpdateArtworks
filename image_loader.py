@@ -1,7 +1,8 @@
+# coding=utf-8
 from __future__ import unicode_literals
 
 import os
-from conf import GlobalConfig
+from conf import GlobalConfig, show_message_box
 import logging
 
 # check the U-Disk and find target images
@@ -13,7 +14,7 @@ lgr = logging.getLogger(__name__)
 
 class Artwork(object):
 
-    def __int__(self, image_path):
+    def __init__(self, image_path):
         self.image_path = image_path
         image_name = os.path.basename(image_path)
         self.image_name = image_name
@@ -44,17 +45,19 @@ def get_image_folder():
 def load_images():
     """
     Load image list
-    :return: list of image names(with file extension)
+    :return: list of Artwork objects
     """
     image_folder = get_image_folder()
     if not os.path.exists(image_folder):
         lgr.debug("Image folder not found.")
+        show_message_box("没有找到书画文件夹，请确保该文件夹放置在U盘根目录下且被命名为images")
         return None
 
     images = filter(
         lambda im: im.split(".")[-1] in conf.image_formats,
         os.listdir(image_folder)
     )
+    images = map(lambda image: Artwork(get_abs_dir(image)), images)
     if len(images) > 0:
         lgr.debug("%s images are detected" % images.count())
     return images
@@ -74,7 +77,7 @@ def need_recreate_motion_xml(images):
         return True
 
     for image in images:
-        if image not in image_history:
+        if image.artwork_full_name not in image_history:
             return True
 
     return False
