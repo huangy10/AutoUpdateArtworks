@@ -14,8 +14,15 @@ lgr = logging.getLogger(__name__)
 
 class Artwork(object):
 
+    """
+    Difference between the name "image" and "artwork"
+
+    When we say "image", it mean the corresponding file. while "artwork" means the content.
+    """
+
     def __init__(self, image_path):
         self.image_path = image_path
+        self.image_dir = os.path.abspath(os.path.dirname(image_path))
         image_name = os.path.basename(image_path)
         self.image_name = image_name
         artwork_full_name, ext = os.path.splitext(image_name)
@@ -34,7 +41,19 @@ class Artwork(object):
 
         #
         self.dst_folder = None
-        self.thumbnail_name = "%s_thumbnail%s" % (artwork_full_name, ext)
+        self.cover_name = "%s_cover%s" % (artwork_full_name, ext)
+        # the thumbnail should always be png file to keep the
+        # transparency property
+        self.thumbnail_name = "%s_thumbnail.png" % artwork_full_name
+
+    def move_to(self, dst_dir):
+        self.image_dir = dst_dir
+
+    def get_cover_path(self):
+        return os.path.join(self.image_dir, self.cover_name)
+
+    def get_thumbnail_path(self):
+        return os.path.join(self.image_dir, self.thumbnail_name)
 
 
 def get_image_folder():
@@ -58,6 +77,7 @@ def load_images():
         lambda im: im.split(".")[-1] in conf.image_formats,
         os.listdir(image_folder)
     )
+
     images = map(lambda image: Artwork(get_abs_dir(image)), images)
     if len(images) > 0:
         lgr.debug("%s images are detected" % len(images))

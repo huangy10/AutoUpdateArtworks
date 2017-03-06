@@ -1,9 +1,10 @@
+# coding=utf-8
 # 1. Detect the insertion of external drive and find if image inputs exits
 # 2. Build the motion.xml config file
 # 3. Copy the images and configuration file into the corresponding directory
 from __future__ import unicode_literals
 
-from conf import GlobalConfig, ConfigEnvironment
+from conf import GlobalConfig, ConfigEnvironment, show_message_box
 from image_loader import load_images, need_recreate_motion_xml, get_abs_dir
 from image_op import backup_images, prepare_daily_image_folder, get_daily_image_dir
 
@@ -31,6 +32,15 @@ def run(program_root):
     with ConfigEnvironment(conf):
         images = load_images()
         if images is None or len(images) == 0:
+            return
+        # Check if the images are valid
+        res = reduce(lambda a, b: a.is_valid and b.is_valid, images, True)
+        if not res:
+            lgr.debug("Find invalid image name.")
+            show_message_box(
+                "发现不正确的图片名称，注意图片名称应当符合“名字_作者_朝代.jpg”（或png)的格式，且请注意"
+                "附上封面，封面的名称应该为“名字_作者_朝代_cover.jpg”（或者png）的格式。"
+            )
             return
         if not need_recreate_motion_xml(images):
             lgr.debug("No update is found.")
