@@ -30,12 +30,13 @@ class Artwork(object):
         # ext has dot
         self.ext = ext
         try:
-            artwork_name, author, dynasty = artwork_full_name.split("_")
+            artwork_name, frame_type, author, dynasty = artwork_full_name.split("_")
             self.is_valid = True
         except ValueError:
             self.is_valid = False
-            artwork_name, author, dynasty = None, None, None
+            artwork_name, frame_type, author, dynasty = None, None, None, None
         self.artwork_name = artwork_name
+        self.frame_type = frame_type
         self.author = author
         self.dynasty = dynasty
 

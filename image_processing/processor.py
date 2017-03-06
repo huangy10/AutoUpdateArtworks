@@ -17,8 +17,8 @@ author_offset = 233
 font_path = os.path.join(base_dir, "font/default.TTF")
 title_font = ImageFont.truetype(font_path, size=75)
 author_font = ImageFont.truetype(font_path, size=60)
-title_color = 0x704d2b
-author_color = 0x8d6a42
+title_color = "#704d2b"
+author_color = "#8d6a42"
 
 def create_mask():
     # size = (cover_radius, cover_radius)
@@ -59,13 +59,14 @@ def insert_cover_to_template(cover_im, template_im):
     return template_im
 
 
-def add_text_to_template(title, author, dynasty, template_im):
+def add_text_to_template(title, frame_type, author, dynasty, template_im):
     draw = ImageDraw.Draw(template_im)
-    title_size = draw.textsize(title, title_font)
+    title_text = "《%s》%s" %(title, frame_type)
+    title_size = draw.textsize(title_text, title_font)
     title_width = title_size[0]
 
     title_margin_left = get_margin_left_with_width(title_width)
-    draw.text((title_margin_left, title_margin_top), title, title_color, font=title_font)
+    draw.text((title_margin_left, title_margin_top), title_text, title_color, font=title_font)
 
     author_text = "%s · %s" % (author, dynasty)
     author_size = draw.textsize(author_text, author_font)
@@ -79,14 +80,23 @@ def build_thumbnail(artwork):
     cover_path = artwork.get_cover_path()
 
     # read images into memory
-    cover_im = Image.open(cover_path)
+
+    try:
+        cover_im = Image.open(cover_path)
+    except IOError:
+        # If the specific cover image is not found,
+        # then the original image is used as cover
+        cover_im = Image.open(artwork.image_path)
     template_im = Image.open(template_file_path)
 
     # insert the cover to the template
     template_im = insert_cover_to_template(cover_im, template_im)
 
     # add text
-    add_text_to_template(artwork.artwork_name, artwork.author, artwork.dynasty, template_im)
+    add_text_to_template(
+        artwork.artwork_name, artwork.frame_type,
+        artwork.author, artwork.dynasty, template_im
+    )
 
     # save the output
     template_im.save(artwork.get_thumbnail_path())
