@@ -1,5 +1,5 @@
 global:
-  U_disk_name: F
+  U_disk_name: E
   image_folder_name: images
   image_formats:
   - png

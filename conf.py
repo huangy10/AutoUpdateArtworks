@@ -70,7 +70,7 @@ class GlobalConfig(object):
 
     @property
     def u_disk_name(self):
-        return self.u_disk_name()
+        return self._u_disk_name
 
     @property
     def history_valid(self):

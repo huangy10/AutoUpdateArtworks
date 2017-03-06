@@ -20,6 +20,7 @@ class Artwork(object):
         self.image_name = image_name
         artwork_full_name, ext = os.path.splitext(image_name)
         self.artwork_full_name = artwork_full_name
+        # ext has dot
         self.ext = ext
         try:
             artwork_name, author, dynasty = artwork_full_name.split("_")
@@ -33,7 +34,7 @@ class Artwork(object):
 
         #
         self.dst_folder = None
-        self.thumbnail_name = "%s_thumbnail.%s" % (artwork_full_name, ext)
+        self.thumbnail_name = "%s_thumbnail%s" % (artwork_full_name, ext)
 
 
 def get_image_folder():
