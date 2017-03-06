@@ -1,0 +1,11 @@
+global:
+  U_disk_name: F
+  image_folder_name: images
+  image_formats:
+  - png
+  - jpg
+  skip_aw_num: 40
+status:
+  busy: false
+  history_valid: false
+history:

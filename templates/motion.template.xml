@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<motion>
+    <scene id="home">
+        <!--This is the home page, as well as the "Horizontal List"-->
+        <effects id="eff1" switch_time=""></effects>
+        <!--Mouse responses-->
+        <!--Go to "Vertical List"-->
+        <act event="mouseup" action="gotoscene" sceneid="pic1001">
+            <rect left="3630" top="1950" width="165" file="作品集.png" />
+            <old hidetime=""></old>
+            <new showtime=""></new>
+        </act>
+        <!--Go to detail page-->
+        <act event="mouseup" action="gotoscene" sceneid="detail">
+            <rect left="1320" top="309" width="1200" height="1542"/>
+        </act>
+
+        <!--The content above in this scene tag should remain static-->
+
+        <!--一.横向列表场景:
+            layer中的img节点的left属性生成规则:第一个固定为264,以后的每个都比前一个多264,但是只有第5个跟第6个之间相差1464.
+            layer中的第一个img节点的top属性生成规则:都是固定为882.
+            layer中的第二个img节点的top属性生成规则:都是固定为309.
+        -->
+
+        <layer id="1">
+            <img id="1_1" file="target_path.png" name="short_cut_name" isshow="yes">
+                <rect left="264" top="882" width="54" height="382"/>
+            </img>
+
+            <img id="1_2" file="another_target_path.png" name="short_cut_name" isshow="no" detail_id="1_2_detail">
+                <rect left="264" top="309" width="1197" height="1512"/>
+            </img>
+        </layer>
+
+    </scene>
+
+    <scene id="pic1001">
+        <!--This is the "Vertical List"-->
+        <act event="mouseup" action="gotoscene" sceneid="home">
+            <rect left="3615" top="1935" width="165" height="165" file="首页.png"/>
+        </act>
+
+        <!--二.竖向列表场景:
+            layer中的img节点的坐标生成规则:五个一行,每行图片的间距是60,行距是169;第一个img的left为200,top为0.
+        -->
+        <layer id="1">
+            <!--The detail_id here should be consistent with the id defined in home scene-->
+            <img id="1_1" file="target_file" name="whatever name" isshow="no" detail_id="detail" img_state="0">
+                <rect left="200" top="0" width="630" height="861"/>
+            </img>
+        </layer>
+    </scene>
+    
+    <scene id="detail">
+        <act event="mouseup" action="gotoscene" sceneid="home">
+            <rect left="3630" top="1950" width="165" height="165" file="返回.png"/>
+        </act>
+
+        <act event="mouseup" action="show" sceneid="">
+            <rect left="3630" top="1800" width="165" height="165" file="知识1.png"/>
+        </act>
+
+        <!--三.详情信息场景:
+
+            1.书画详情图片:
+            a.图片为横屏时:需要输入图片初始位置坐标(x,0),配置文件中left的值等于(0-x),top是固定的为0.
+            b.图片为竖屏时:需要根据图片的宽高计算出初始left的值,left=(3840-(2160/height*width))/2,top是固定的为0.
+
+            2.精品书画的知识点:
+            a.知识点标识坐标:操作人员输入坐标点.
+            b.知识点详情图片坐标:操作人员输入,存入数据库时需要处理一下:left=知识点详情x-知识点标识x,top=知识点详情y-知识点标识y.
+            c.知识点详情图片中的热区坐标:操作人员输入,存入数据库时需要处理一下:根据b中得到存入数据库的值得到,left=热区x-b.left,top=热区y-b.top.
+
+            3.精品书画中的翻译点:
+            a.翻译点标识坐标:操作人员输入坐标点.
+            b.翻译点详情图片坐标:操作人员输入坐标点.
+        -->
+
+        <layer id="1">
+            <img id="1_1" file="file.png" name="name" isshow="no">
+                <rect left="" top="" width="" height="" orientation="" biaoshi="" fanyi="" fybs=""/>
+            </img>
+        </layer>
+    </scene>
+</motion>
