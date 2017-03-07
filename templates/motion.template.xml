@@ -1,86 +1,1211 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <motion>
-    <scene id="home">
-        <!--This is the home page, as well as the "Horizontal List"-->
-        <effects id="eff1" switch_time=""></effects>
-        <!--Mouse responses-->
-        <!--Go to "Vertical List"-->
-        <act event="mouseup" action="gotoscene" sceneid="pic1001">
-            <rect left="3630" top="1950" width="165" file="作品集.png" />
-            <old hidetime=""></old>
-            <new showtime=""></new>
-        </act>
-        <!--Go to detail page-->
-        <act event="mouseup" action="gotoscene" sceneid="detail">
-            <rect left="1320" top="309" width="1200" height="1542"/>
-        </act>
+  <scene id="home">
+    <effects id="eff1" switchtime=""></effects>
+    <act event="mouseup" action="gotoscene" sceneid="pic1001">
+      <rect left="3630" top="1950" width="165" height="165" file="作品集.png"/>
+      <old hidetime=""></old>
+      <new showtime=""></new>
+    </act>
 
-        <!--The content above in this scene tag should remain static-->
+    <act event="mouseup" action="gotoscene" sceneid="detail">
+      <rect left="1320" top="309" width="1200" height="1542" />
+    </act>
 
-        <!--一.横向列表场景:
-            layer中的img节点的left属性生成规则:第一个固定为264,以后的每个都比前一个多264,但是只有第5个跟第6个之间相差1464.
-            layer中的第一个img节点的top属性生成规则:都是固定为882.
-            layer中的第二个img节点的top属性生成规则:都是固定为309.
-        -->
+    <layer id="1">
+      <img id="01_bnt1" file="01_bnt1.png" name="bnt1" isshow="yes">
+        <rect left="264" top="882" width="54" height="382" />
+      </img>
+      <img id="01_bnt2" file="01_bnt2.png" name="bnt2" isshow="no" detail_id="01_bnt_detail">
+        <rect left="264" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="2">
+      <img id="02_xszqt1" file="02_xszqt1.png" name="xszqt1" isshow="yes">
+        <rect left="528" top="882" width="54" height="482" />
+      </img>
+      <img id="02_xszqt2" file="02_xszqt2.png" name="xszqt2" isshow="no" detail_id="02_xszqt_detail">
+        <rect left="528" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="3">
+      <img id="03_hxzyyt1" file="03_hxzyyt1.png" name="hxzyyt1" isshow="yes">
+        <rect left="792" top="882" width="54" height="533" />
+      </img>
+      <img id="03_hxzyyt2" file="03_hxzyyt2.png" name="hxzyyt2" isshow="no" detail_id="03_hxzyyt_detail">
+        <rect left="792" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="4">
+      <img id="04_jfxjt1" file="04_jfxjt1.png" name="jfxjt1" isshow="yes">
+        <rect left="1056" top="882" width="54" height="483" />
+      </img>
+      <img id="04_jfxjt2" file="04_jfxjt2.png" name="jfxjt2" isshow="no" detail_id="04_jfxjt_detail">
+        <rect left="1056" top="309" width="1197" height="1511" />
+      </img>
+    </layer>
+    <layer id="5">
+      <img id="05_smptt1" file="05_smptt1.png" name="smptt1" isshow="no">
+        <rect left="1320" top="882" width="54" height="483" />
+      </img>
+      <img id="05_smptt2" file="05_smptt2.png" name="smptt2" isshow="yes" detail_id="05_smptt_detail">
+        <rect left="1320" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="6">
+      <img id="06_xylzt1" file="06_xylzt1.png" name="xylzt1" isshow="yes">
+        <rect left="2784" top="882" width="54" height="483" />
+      </img>
+      <img id="06_xylzt2" file="06_xylzt2.png" name="xylzt2" isshow="no" detail_id="06_xylzt_detail">
+        <rect left="2784" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="7">
+      <img id="07_lsft1" file="07_lsft1.png" name="lsft1" isshow="yes">
+        <rect left="3048" top="882" width="54" height="382" />
+      </img>
+      <img id="07_lsft2" file="07_lsft2.png" name="lsft2" isshow="no" detail_id="07_lsft_detail">
+        <rect left="3048" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="8">
+      <img id="08_yct1" file="08_yct1.png" name="yct1" isshow="yes">
+        <rect left="3312" top="882" width="54" height="382" />
+      </img>
+      <img id="08_yct2" file="08_yct2.png" name="yct2" isshow="no" detail_id="08_yct_detail">
+        <rect left="3312" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="9">
+      <img id="09_wnt1" file="09_wnt1.png" name="wnt1" isshow="yes">
+        <rect left="3576" top="882" width="54" height="382" />
+      </img>
+      <img id="09_wnt2" file="09_wnt2.png" name="wnt2" isshow="no" detail_id="09_wnt_detail">
+        <rect left="3576" top="309" width="1197" height="1513" />
+      </img>
+    </layer>
+    <layer id="10">
+      <img id="10_cphqt1" file="10_cphqt1.png" name="cphqt1" isshow="yes">
+        <rect left="3840" top="882" width="54" height="482" />
+      </img>
+      <img id="10_cphqt2" file="10_cphqt2.png" name="cphqt2" isshow="no" detail_id="10_cphqt_detail">
+        <rect left="3840" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
 
-        <layer id="1">
-            <img id="1_1" file="target_path.png" name="short_cut_name" isshow="yes">
-                <rect left="264" top="882" width="54" height="382"/>
-            </img>
+    <layer id="11">
+      <img id="11_xxt1" file="11_xxt1.png" name="xxt1" isshow="yes">
+        <rect left="4104" top="882" width="54" height="382" />
+      </img>
+      <img id="11_xxt2" file="11_xxt2.png" name="xxt2" isshow="no" detail_id="11_xxt_detail">
+        <rect left="4104" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="12">
+      <img id="12_gxt1" file="12_gxt1.png" name="gxt1" isshow="yes">
+        <rect left="4368" top="882" width="54" height="382" />
+      </img>
+      <img id="12_gxt2" file="12_gxt2.png" name="gxt2" isshow="no" detail_id="12_gxt_detail">
+        <rect left="4368" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="13">
+      <img id="13_kspyt1" file="13_kspyt1.png" name="kspyt1" isshow="yes">
+        <rect left="4632" top="882" width="54" height="483" />
+      </img>
+      <img id="13_kspyt2" file="13_kspyt2.png" name="kspyt2" isshow="no" detail_id="13_kspyt_detail">
+        <rect left="4632" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="14">
+      <img id="14_qljst1" file="14_qljst1.png" name="qljst1" isshow="yes">
+        <rect left="4896" top="882" width="54" height="482" />
+      </img>
+      <img id="14_qljst2" file="14_qljst2.png" name="qljst2" isshow="no" detail_id="14_qljst_detail">
+        <rect left="4896" top="309" width="1197" height="1511" />
+      </img>
+    </layer>
+    <layer id="15">
+      <img id="15_cwt1" file="15_cwt1.png" name="cwt1" isshow="yes">
+        <rect left="5160" top="882" width="54" height="382" />
+      </img>
+      <img id="15_cwt2" file="15_cwt2.png" name="cwt2" isshow="no" detail_id="15_cwt_detail">
+        <rect left="5160" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="16">
+      <img id="16_tgt1" file="16_tgt1.png" name="tgt1" isshow="yes">
+        <rect left="5424" top="882" width="54" height="383" />
+      </img>
+      <img id="16_tgt2" file="16_tgt2.png" name="tgt2" isshow="no" detail_id="16_tgt_detail">
+        <rect left="5424" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="17">
+      <img id="17_tqt1" file="17_tqt1.png" name="tqt1" isshow="yes">
+        <rect left="5688" top="882" width="54" height="383" />
+      </img>
+      <img id="17_tqt2" file="17_tqt2.png" name="tqt2" isshow="no" detail_id="17_tqt_detail">
+        <rect left="5688" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="18">
+      <img id="18_fwymft1" file="18_fwymft1.png" name="fwymft" isshow="yes">
+        <rect left="5952" top="882" width="54" height="533" />
+      </img>
+      <img id="18_fwymft2" file="18_fwymft2.png" name="fwymft" isshow="no" detail_id="18_fwymft_detail">
+        <rect left="5952" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="19">
+      <img id="19_qjymt1" file="19_qjymt1.png" name="qjymt1" isshow="yes">
+        <rect left="6216" top="882" width="54" height="482" />
+      </img>
+      <img id="19_qjymt2" file="19_qjymt2.png" name="qjymt2" isshow="no" detail_id="19_qjymt_detail">
+        <rect left="6216" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
 
-            <img id="1_2" file="another_target_path.png" name="short_cut_name" isshow="no" detail_id="1_2_detail">
-                <rect left="264" top="309" width="1197" height="1512"/>
-            </img>
-        </layer>
-
-    </scene>
-
-    <scene id="pic1001">
-        <!--This is the "Vertical List"-->
-        <act event="mouseup" action="gotoscene" sceneid="home">
-            <rect left="3615" top="1935" width="165" height="165" file="首页.png"/>
-        </act>
-
-        <!--二.竖向列表场景:
-            layer中的img节点的坐标生成规则:五个一行,每行图片的间距是60,行距是169;第一个img的left为200,top为0.
-        -->
-        <layer id="1">
-            <!--The detail_id here should be consistent with the id defined in home scene-->
-            <img id="1_1" file="target_file" name="whatever name" isshow="no" detail_id="detail" img_state="0">
-                <rect left="200" top="0" width="630" height="861"/>
-            </img>
-        </layer>
-    </scene>
+    <layer id="20">
+      <img id="20_qtjst1" file="20_qtjst1.png" name="qtjst1" isshow="yes">
+        <rect left="6480" top="882" width="54" height="483" />
+      </img>
+      <img id="20_qtjst2" file="20_qtjst2.png" name="qtjst2" isshow="no" detail_id="20_qtjst_detail">
+        <rect left="6480" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="21">
+      <img id="21_xhsqft1" file="21_xhsqft1.png" name="xhsqft1" isshow="yes">
+        <rect left="6744" top="882" width="54" height="565" />
+      </img>
+      <img id="21_xhsqft2" file="21_xhsqft2.png" name="xhsqft2" isshow="no" detail_id="21_xhsqft_detail">
+        <rect left="6744" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="22">
+      <img id="22_zht1" file="22_zht1.png" name="zht1" isshow="yes">
+        <rect left="7008" top="882" width="54" height="383" />
+      </img>
+      <img id="22_zht2" file="22_zht2.png" name="zht2" isshow="no" detail_id="22_zht_detail">
+        <rect left="7008" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="23">
+      <img id="23_zkyyt1" file="23_zkyyt1.png" name="zkyyt1" isshow="yes">
+        <rect left="7272" top="882" width="54" height="483" />
+      </img>
+      <img id="23_zkyyt2" file="23_zkyyt2.png" name="zkyyt2" isshow="no" detail_id="23_zkyyt_detail">
+        <rect left="7272" top="309" width="1197" height="1511" />
+      </img>
+    </layer>
+    <layer id="24">
+      <img id="24_wlct1" file="24_wlct1.png" name="wlct1" isshow="yes">
+        <rect left="7536" top="882" width="54" height="432" />
+      </img>
+      <img id="24_wlct2" file="24_wlct2.png" name="wlct2" isshow="no" detail_id="24_wlct_detail">
+        <rect left="7536" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="25">
+      <img id="25_ltxxt1" file="25_ltxxt1.png" name="ltxxt1" isshow="yes">
+        <rect left="7800" top="882" width="54" height="498" />
+      </img>
+      <img id="25_ltxxt2" file="25_ltxxt2.png" name="ltxxt2" isshow="no" detail_id="25_ltxxt_detail">
+        <rect left="7800" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="26">
+      <img id="26_wsgjt1" file="26_wsgjt1.png" name="wsgjt1" isshow="yes">
+        <rect left="8064" top="882" width="54" height="483" />
+      </img>
+      <img id="26_wsgjt2" file="26_wsgjt2.png" name="wsgjt2" isshow="no" detail_id="26_wsgjt_detail">
+        <rect left="8064" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="27">
+      <img id="27_yxt1" file="27_yxt1.png" name="yxt1" isshow="yes">
+        <rect left="8328" top="882" width="54" height="383" />
+      </img>
+      <img id="27_yxt2" file="27_yxt2.png" name="yxt2" isshow="no" detail_id="27_yxt_detail">
+        <rect left="8328" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="28">
+      <img id="28_sjqfdcg1" file="28_sjqfdcg1.png" name="sjqfdcg" isshow="yes">
+        <rect left="8592" top="882" width="54" height="583" />
+      </img>
+      <img id="28_sjqfdcg2" file="28_sjqfdcg2.png" name="sjqfdcg2" isshow="no" detail_id="28_sjqfdcg_detail">
+        <rect left="8592" top="309" width="1197" height="1513" />
+      </img>
+    </layer>
+    <layer id="29">
+      <img id="29_pacxt1" file="29_pacxt1.png" name="pacxt1" isshow="yes">
+        <rect left="8856" top="882" width="54" height="483" />
+      </img>
+      <img id="29_pacxt2" file="29_pacxt2.png" name="pacxt2" isshow="no" detail_id="29_pacxt_detail">
+        <rect left="8856" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="30">
+      <img id="30_伯远帖1" file="30_伯远帖1.png" name="伯远帖1" isshow="yes">
+        <rect left="9120" top="882" width="54" height="313" />
+      </img>
+      <img id="30_伯远帖2" file="30_伯远帖2.png" name="伯远帖2" isshow="no" detail_id="30_伯远帖_detail">
+        <rect left="9120" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="31">
+      <img id="31_平复帖1" file="31_平复帖1.png" name="平复帖1" isshow="yes">
+        <rect left="9384" top="882" width="54" height="382" />
+      </img>
+      <img id="31_平复帖2" file="31_平复帖2.png" name="平复帖2" isshow="no" detail_id="31_平复帖_detail">
+        <rect left="9384" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="32">
+      <img id="32_苕溪诗1" file="32_苕溪诗1.png" name="苕溪诗1" isshow="yes">
+        <rect left="9648" top="882" width="54" height="382" />
+      </img>
+      <img id="32_苕溪诗2" file="32_苕溪诗2.png" name="苕溪诗2" isshow="no" detail_id="32_苕溪诗_detail">
+        <rect left="9648" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="33">
+      <img id="33_诸上座帖1" file="33_诸上座帖1.png" name="诸上座帖1" isshow="yes">
+        <rect left="9912" top="882" width="54" height="364" />
+      </img>
+      <img id="33_诸上座帖2" file="33_诸上座帖2.png" name="诸上座帖2" isshow="no" detail_id="33_诸上座帖_detail">
+        <rect left="9912" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="34">
+      <img id="34_草书千字文1" file="34_草书千字文1.png" name="草书千字文1" isshow="yes">
+        <rect left="10176" top="882" width="54" height="482" />
+      </img>
+      <img id="34_草书千字文2" file="34_草书千字文2.png" name="草书千字文2" isshow="no" detail_id="34_草书千字文_detail">
+        <rect left="10176" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
     
-    <scene id="detail">
-        <act event="mouseup" action="gotoscene" sceneid="home">
-            <rect left="3630" top="1950" width="165" height="165" file="返回.png"/>
-        </act>
+    <layer id="35">
+      <img id="35_史颂鼎铭1" file="35_史颂鼎铭1.png" name="史颂鼎铭1" isshow="yes">
+        <rect left="10440" top="882" width="54" height="433" />
+      </img>
+      <img id="35_史颂鼎铭2" file="35_史颂鼎铭2.png" name="史颂鼎铭2" isshow="no" detail_id="35_史颂鼎铭_detail">
+        <rect left="10440" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    
+    <layer id="36">
+      <img id="36_冯摹兰亭序1" file="36_冯摹兰亭序1.png" name="冯摹兰亭序1" isshow="yes">
+        <rect left="10704" top="882" width="54" height="482" />
+      </img>
+      <img id="36_冯摹兰亭序2" file="36_冯摹兰亭序2.png" name="冯摹兰亭序2" isshow="no" detail_id="36_冯摹兰亭序_detail">
+        <rect left="10704" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="37">
+      <img id="37_张好好诗1" file="37_张好好诗1.png" name="张好好诗1" isshow="yes">
+        <rect left="10968" top="882" width="54" height="432" />
+      </img>
+      <img id="37_张好好诗2" file="37_张好好诗2.png" name="张好好诗2" isshow="no" detail_id="37_张好好诗_detail">
+        <rect left="10968" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <!--<layer id="38">
+      <img id="38_四箴四条屏1" file="38_四箴四条屏1.png" name="四箴四条屏1" isshow="yes">
+        <rect left="11232" top="882" width="54" height="414" />
+      </img>
+      <img id="38_四箴四条屏2" file="38_四箴四条屏2.png" name="四箴四条屏2" isshow="no" detail_id="38_四箴四条屏_detail">
+        <rect left="11232" top="309" width="1197" height="1512" />
+      </img>
+    </layer>
+    <layer id="39">
+      <img id="39_许氏说文叙1" file="39_许氏说文叙1.png" name="许氏说文叙1" isshow="yes">
+        <rect left="11496" top="882" width="54" height="484" />
+      </img>
+      <img id="39_许氏说文叙2" file="39_许氏说文叙2.png" name="许氏说文叙2" isshow="no" detail_id="39_许氏说文叙_detail">
+        <rect left="11496" top="309" width="1197" height="1512" />
+      </img>
+    </layer>-->
+    <layer id="38">
+      <img id="40_急就章1" file="40_急就章1.png" name="急就章1" isshow="yes">
+        <rect left="11232" top="882" width="54" height="382" />
+        <!--<rect left="11760" top="882" width="54" height="382" />-->
+      </img>
+      <img id="40_急就章2" file="40_急就章2.png" name="急就章2" isshow="no" detail_id="40_急就章_detail">
+        <rect left="11232" top="309" width="1197" height="1512" />
+        <!--<rect left="11760" top="309" width="1197" height="1512" />-->
+      </img>
+    </layer>
+  </scene>
 
-        <act event="mouseup" action="show" sceneid="">
-            <rect left="3630" top="1800" width="165" height="165" file="知识1.png"/>
-        </act>
+  <scene id="pic1001">
+    <act event="mouseup" action="gotoscene" sceneid="home">
+      <rect left="3615" top="1935" width="165" height="165" file="首页.png"/>
+    </act>
+    
+    <layer id="1">
+      <img id="01_bnt3" file="01_bnt3.png" name="bnt3" isshow="no" detail_id="01_bnt_detail" img_state="0">
+        <rect left="200" top="0" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="2">
+      <img id="02_xszqt3" file="02_xszqt3.png" name="xszqt3" isshow="no" detail_id="02_xszqt_detail" img_state="0">
+        <rect left="890" top="0" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="3">
+      <img id="03_hxzyyt3" file="03_hxzyyt3.png" name="hxzyyt3" isshow="no" detail_id="03_hxzyyt_detail" img_state="0">
+        <rect left="1580" top="0" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="4">
+      <img id="04_jfxjt3" file="04_jfxjt3.png" name="jfxjt3" isshow="no" detail_id="04_jfxjt_detail" img_state="0">
+        <rect left="2270" top="0" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="5">
+      <img id="05_smptt3" file="05_smptt3.png" name="smptt3" isshow="no" detail_id="05_smptt_detail" img_state="0">
+        <rect left="2960" top="0" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="6">
+      <img id="06_xylzt3" file="06_xylzt3.png" name="xylzt3" isshow="no" detail_id="06_xylzt_detail" img_state="0">
+        <rect left="200" top="1030" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="7">
+      <img id="07_lsft3" file="07_lsft3.png" name="lsft3" isshow="no" detail_id="07_lsft_detail" img_state="0">
+        <rect left="890" top="1030" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="8">
+      <img id="08_yct3" file="08_yct3.png" name="yct3" isshow="no" detail_id="08_yct_detail" img_state="0">
+        <rect left="1580" top="1030" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="9">
+      <img id="09_wnt3" file="09_wnt3.png" name="wnt3" isshow="no" detail_id="09_wnt_detail" img_state="0">
+        <rect left="2270" top="1030" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="10">
+      <img id="10_cphqt3" file="10_cphqt3.png" name="cphqt3" isshow="no" detail_id="10_cphqt_detail" img_state="0">
+        <rect left="2960" top="1030" width="630" height="861" />
+      </img>
+    </layer>
 
-        <!--三.详情信息场景:
+    <layer id="11">
+      <img id="11_xxt3" file="11_xxt3.png" name="xxt3" isshow="no" detail_id="11_xxt_detail" img_state="0">
+        <rect left="200" top="2060" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="12">
+      <img id="12_gxt3" file="12_gxt3.png" name="gxt3" isshow="no" detail_id="12_gxt_detail" img_state="0">
+        <rect left="890" top="2060" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="13">
+      <img id="13_kspyt3" file="13_kspyt3.png" name="kspyt3" isshow="no" detail_id="13_kspyt_detail" img_state="0">
+        <rect left="1580" top="2060" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="14">
+      <img id="14_qljst3" file="14_qljst3.png" name="qljst3" isshow="no" detail_id="14_qljst_detail" img_state="0">
+        <rect left="2270" top="2060" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="15">
+      <img id="15_cwt3" file="15_cwt3.png" name="cwt3" isshow="no" detail_id="15_cwt_detail" img_state="0">
+        <rect left="2960" top="2060" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="16">
+      <img id="16_tgt3" file="16_tgt3.png" name="tgt3" isshow="no" detail_id="16_tgt_detail" img_state="0">
+        <rect left="200" top="3090" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="17">
+      <img id="17_tqt3" file="17_tqt3.png" name="tqt3" isshow="no" detail_id="17_tqt_detail" img_state="0">
+        <rect left="890" top="3090" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="18">
+      <img id="18_fwymft3" file="18_fwymft3.png" name="fwymft3" isshow="no" detail_id="18_fwymft_detail" img_state="0">
+        <rect left="1580" top="3090" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="19">
+      <img id="19_qjymt3" file="19_qjymt3.png" name="qjymt3" isshow="no" detail_id="19_qjymt_detail" img_state="0">
+        <rect left="2270" top="3090" width="630" height="861" />
+      </img>
+    </layer>
 
-            1.书画详情图片:
-            a.图片为横屏时:需要输入图片初始位置坐标(x,0),配置文件中left的值等于(0-x),top是固定的为0.
-            b.图片为竖屏时:需要根据图片的宽高计算出初始left的值,left=(3840-(2160/height*width))/2,top是固定的为0.
+    <layer id="20">
+      <img id="20_qtjst3" file="20_qtjst3.png" name="qtjst3" isshow="no" detail_id="20_qtjst_detail" img_state="0">
+        <rect left="2960" top="3090" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="21">
+      <img id="21_xhsqft3" file="21_xhsqft3.png" name="xhsqft3" isshow="no" detail_id="21_xhsqft_detail" img_state="0">
+        <rect left="200" top="4120" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="22">
+      <img id="22_zht3" file="22_zht3.png" name="zht3" isshow="no" detail_id="22_zht_detail" img_state="0">
+        <rect left="890" top="4120" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="23">
+      <img id="23_zkyyt3" file="23_zkyyt3.png" name="zkyyt3" isshow="no" detail_id="23_zkyyt_detail" img_state="0">
+        <rect left="1580" top="4120" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="24">
+      <img id="24_wlct3" file="24_wlct3.png" name="wlct3" isshow="no" detail_id="24_wlct_detail" img_state="0">
+        <rect left="2270" top="4120" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="25">
+      <img id="25_ltxxt3" file="25_ltxxt3.png" name="ltxxt3" isshow="no" detail_id="25_ltxxt_detail" img_state="0">
+        <rect left="2960" top="4120" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="26">
+      <img id="26_wsgjt3" file="26_wsgjt3.png" name="wsgjt3" isshow="no" detail_id="26_wsgjt_detail" img_state="0">
+        <rect left="200" top="5150" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="27">
+      <img id="27_yxt3" file="27_yxt3.png" name="yxt3" isshow="no" detail_id="27_yxt_detail" img_state="0">
+        <rect left="890" top="5150" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="28">
+      <img id="28_sjqfdcg3" file="28_sjqfdcg3.png" name="sjqfdcg3" isshow="no" detail_id="28_sjqfdcg_detail" img_state="0">
+        <rect left="1580" top="5150" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="29">
+      <img id="29_pacxt3" file="29_pacxt3.png" name="pacxt3" isshow="no" detail_id="29_pacxt_detail" img_state="0">
+        <rect left="2270" top="5150" width="630" height="861" />
+      </img>
+    </layer>
+    
+    <layer id="30">
+      <img id="30_伯远帖3" file="30_伯远帖3.png" name="伯远帖3" isshow="no" detail_id="30_伯远帖_detail" img_state="0">
+        <rect left="2960" top="5150" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="31">
+      <img id="31_平复帖3" file="31_平复帖3.png" name="平复帖3" isshow="no" detail_id="31_平复帖_detail" img_state="0">
+        <rect left="200" top="6180" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="32">
+      <img id="32_苕溪诗3" file="32_苕溪诗3.png" name="苕溪诗3" isshow="no" detail_id="32_苕溪诗_detail" img_state="0">
+        <rect left="890" top="6180" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="33">
+      <img id="33_诸上座帖3" file="33_诸上座帖3.png" name="诸上座帖3" isshow="no" detail_id="33_诸上座帖_detail" img_state="0">
+        <rect left="1580" top="6180" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="34">
+      <img id="34_草书千字文3" file="34_草书千字文3.png" name="草书千字文3" isshow="no" detail_id="34_草书千字文_detail" img_state="0">
+        <rect left="2270" top="6180" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="35">
+      <img id="35_史颂鼎铭3" file="35_史颂鼎铭3.png" name="史颂鼎铭3" isshow="no" detail_id="35_史颂鼎铭_detail" img_state="0">
+        <rect left="2960" top="6180" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="36">
+      <img id="36_冯摹兰亭序3" file="36_冯摹兰亭序3.png" name="冯摹兰亭序3" isshow="no" detail_id="36_冯摹兰亭序_detail" img_state="0">
+        <rect left="200" top="7210" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="37">
+      <img id="37_张好好诗3" file="37_张好好诗3.png" name="张好好诗3" isshow="no" detail_id="37_张好好诗_detail" img_state="0">
+        <rect left="890" top="7210" width="630" height="861" />
+      </img>
+    </layer>
+    <layer id="38">
+      <img id="38_四箴四条屏3" file="38_四箴四条屏3.png" name="四箴四条屏3" isshow="no" detail_id="38_四箴四条屏_detail" img_state="0" title="四条屏.png">
+        <rect left="1580" top="7210" width="630" height="861" two_level_pic="四条屏1:98:册页1:901:38_四箴四条屏1_detail;四条屏2:2018:册页2:2821:38_四箴四条屏2_detail"/>
+      </img>
+    </layer>
+    <layer id="39">
+      <img id="39_许氏说文叙3" file="39_许氏说文叙3.png" name="许氏说文叙3" isshow="no" detail_id="39_许氏说文叙_detail" img_state="0"  title="许氏说.png">
+        <rect left="2270" top="7210" width="630" height="861" two_level_pic="许氏说7:-2500:册页7:-1697:39_许氏说文叙7_detail;许氏说8:-721:册页8:82:39_许氏说文叙8_detail;许氏说1:1058:册页1:1861:39_许氏说文叙1_detail;许氏说2:2837:册页2:3640:39_许氏说文叙2_detail;许氏说3:4616:册页3:5419:39_许氏说文叙3_detail;许氏说4:6395:册页4:7198:39_许氏说文叙4_detail;许氏说5:8174:册页5:8977:39_许氏说文叙5_detail;许氏说6:9953:册页6:10756:39_许氏说文叙6_detail"/>
+      </img>
+    </layer>
+    <layer id="40">
+      <img id="40_急就章3" file="40_急就章3.png" name="急就章3" isshow="no" detail_id="40_急就章_detail" img_state="0">
+        <rect left="2960" top="7210" width="630" height="861" />
+      </img>
+    </layer>
+  </scene>
 
-            2.精品书画的知识点:
-            a.知识点标识坐标:操作人员输入坐标点.
-            b.知识点详情图片坐标:操作人员输入,存入数据库时需要处理一下:left=知识点详情x-知识点标识x,top=知识点详情y-知识点标识y.
-            c.知识点详情图片中的热区坐标:操作人员输入,存入数据库时需要处理一下:根据b中得到存入数据库的值得到,left=热区x-b.left,top=热区y-b.top.
+  <scene id="detail">
+    <act event="mouseup" action="gotoscene" sceneid="home">
+      <rect left="3630" top="1950" width="165" height="165" file="返回.png"/>
+    </act>
+    <act event="mouseup" action="show" sceneid="">
+      <rect left="3630" top="1800" width="165" height="165" file="知识1.png"/>
+    </act>
+    
 
-            3.精品书画中的翻译点:
-            a.翻译点标识坐标:操作人员输入坐标点.
-            b.翻译点详情图片坐标:操作人员输入坐标点.
-        -->
-
-        <layer id="1">
-            <img id="1_1" file="file.png" name="name" isshow="no">
-                <rect left="" top="" width="" height="" orientation="" biaoshi="" fanyi="" fybs=""/>
-            </img>
-        </layer>
-    </scene>
+    <layer id="1">
+      <img id="01_bnt_detail" file="01_步辇图.jpg" name="bnt_detail" isshow="no">
+        <rect left="-25450" top="0" width="16388" height="1080"  orientation="x" biaoshi="27190:350;28420:800;26575:800" fanyi="261:357:27100:0;2990:2160:22350:0" fybs="27292:150;25100:635"/>
+      </img>
+      <img id="01_bnt_detail_bs1" file="01_bnt_detail_bs1.png" name="bnt_detail_bs1" isshow="no">
+        <rect left="100" top="-150" width="1136" height="956" />
+      </img>
+      <img id="01_bnt_detail_bs2" file="01_bnt_detail_bs2.png" name="bnt_detail_bs2" isshow="no">
+        <rect left="100" top="-350" width="901" height="954" />
+      </img>
+      <img id="01_bnt_detail_bs3" file="01_bnt_detail_bs3.png" name="bnt_detail_bs3" isshow="no">
+        <rect left="-725" top="-350" width="689" height="954" />
+      </img>
+      <img id="01_bnt_detail_bs2_rq1" file="01_bnt_detail_bs2_rq1.png" name="bnt_detail_bs2_rq1" isshow="no" show_file="tingqintu.png:1096:2160">
+        <rect left="468" top="320" width="63" height="181" />
+      </img>
+    </layer>
+    <layer id="2">
+      <img id="02_xszqt_detail" file="02_写生珍禽图.jpg" name="xszqt_detail" isshow="no">
+        <rect left="-1900" top="0" width="5241" height="1080" orientation="x" biaoshi="2080:1680;3300:1200;2275:400" fanyi="72:182:2080:1760" fybs="2139:1820"/>
+      </img>
+      <img id="02_xszqt_detail_bs1" file="02_xszqt_detail_bs1.png" name="xszqt_detail_bs1" isshow="no">
+        <rect left="-780" top="-730" width="764" height="954" />
+      </img>
+      <img id="02_xszqt_detail_bs2" file="02_xszqt_detail_bs2.png" name="xszqt_detail_bs2" isshow="no">
+        <rect left="100" top="-250" width="692" height="954" />
+      </img>
+      <img id="02_xszqt_detail_bs3" file="02_xszqt_detail_bs3.png" name="xszqt_detail_bs3" isshow="no">
+        <rect left="100" top="-150" width="837" height="954" />
+      </img>
+    </layer>
+    <layer id="3">
+      <img id="03_hxzyyt_detail" file="03_韩熙载夜宴图.jpg" name="hxzyyt_detail" isshow="no">
+        <rect left="-37400" top="0" width="26858" height="1080" orientation="x" biaoshi="43735:1150;41100:350;34550:775" fanyi="838:1169:43050:0" fybs="43140:810"/>
+      </img>
+      <img id="03_hxzyyt_detail_bs1" file="03_hxzyyt_detail_bs1.png" name="hxzyyt_detail_bs1" isshow="no">
+        <rect left="100" top="-310" width="987" height="954" />
+      </img>
+      <img id="03_hxzyyt_detail_bs2" file="03_hxzyyt_detail_bs2.png" name="hxzyyt_detail_bs2" isshow="no">
+        <rect left="100" top="0" width="764" height="954" />
+      </img>
+      <img id="03_hxzyyt_detail_bs3" file="03_hxzyyt_detail_bs3.png" name="hxzyyt_detail_bs3" isshow="no">
+        <rect left="100" top="-175" width="695" height="955" />
+      </img>
+      <img id="03_hxzyyt_detail_bs1_rq1" file="03_hxzyyt_detail_bs1_rq1.png" name="hxzyyt_detail_bs1_rq1" isshow="no" show_file="hanhuangwenyuan.png:3840:1961">
+        <rect left="625" top="-75" width="63" height="181" />
+      </img>
+      <img id="03_hxzyyt_detail_bs2_rq1" file="03_hxzyyt_detail_bs2_rq1.png" name="hxzyyt_detail_bs2_rq1" isshow="no" show_file="luoshentu.png:3840:333">
+        <rect left="255" top="83" width="63" height="214" />
+      </img>
+    </layer>
+    <layer id="4">
+      <img id="04_jfxjt_detail" file="04_九峰雪霁图.jpg" name="jfxjt_detail" isshow="no">
+        <rect left="1410.7" top="0" width="1920" height="4072" orientation="y" biaoshi="2700:235;350:400" fanyi="1140:1245:2700:0" fybs="3340:1080"/>
+      </img>
+      <img id="04_jfxjt_detail_bs1" file="04_jfxjt_detail_bs1.png" name="jfxjt_detail_bs1" isshow="no">
+        <rect left="-850" top="-35" width="823" height="959" />
+      </img>
+      <img id="04_jfxjt_detail_bs2" file="04_jfxjt_detail_bs2.png" name="jfxjt_detail_bs2" isshow="no">
+        <rect left="100" top="-200" width="764" height="954" />
+      </img>
+      <img id="04_jfxjt_detail_bs1_rq1" file="04_jfxjt_detail_bs1_rq1.png" name="jfxjt_detail_bs1_rq1" isshow="no" show_file="shanjutu.png:849:2160">
+        <rect left="-270" top="417" width="65" height="213" />
+      </img>
+      <img id="04_jfxjt_detail_bs2_rq1" file="04_jfxjt_detail_bs2_rq1.png" name="jfxjt_detail_bs2_rq1" isshow="no" show_file="yucunxiaoxue.png:3840:778">
+        <rect left="257" top="180" width="65" height="259" />
+      </img>
+      <img id="04_jfxjt_detail_bs2_rq2" file="04_jfxjt_detail_bs2_rq2.png" name="jfxjt_detail_bs2_rq2" isshow="no" show_file="xuejiangguizhuo.png:3840:695">
+        <rect left="188" top="-120" width="65" height="259" />
+      </img>
+    </layer>
+    <layer id="5">
+      <img id="05_smptt_detail" file="05_水墨葡萄轴.jpg" name="smptt_detail" isshow="no">
+        <rect left="1493.83" top="0" width="1920" height="4866" orientation="y" biaoshi="1790:540;2150:4730" fanyi="1354:2648:600:400" fybs="747:2115"/>
+      </img>
+      <img id="05_smptt_detail_bs1" file="05_smptt_detail_bs1.png" name="smptt_detail_bs1" isshow="no">
+        <rect left="100" top="0" width="1203" height="954" />
+      </img>
+      <img id="05_smptt_detail_bs2" file="05_smptt_detail_bs2.png" name="smptt_detail_bs2" isshow="no">
+        <rect left="-800" top="0" width="764" height="954" />
+      </img>
+      <img id="05_smptt_detail_bs1_rq1" file="05_smptt_detail_bs1_rq1.png" name="smptt_detail_bs1_rq1" isshow="no" show_file="chendaofu.png:1390:2160">
+        <rect left="840" top="168" width="63" height="181" />
+      </img>
+      <img id="05_smptt_detail_bs1_rq2" file="05_smptt_detail_bs1_rq2.png" name="smptt_detail_bs1_rq2" isshow="no" show_file="maoshihuahui.png:3840:595">
+        <rect left="765" top="82" width="65" height="287" />
+      </img>
+      <img id="05_smptt_detail_bs1_rq3" file="05_smptt_detail_bs1_rq3.png" name="smptt_detail_bs1_rq3" isshow="no" show_file="zitengtu.png:888:2160">
+        <rect left="695" top="82" width="63" height="181" />
+      </img>
+    </layer>
+    <layer id="6">
+      <img id="06_xylzt_detail" file="06_悬崖兰竹图.jpg" name="xylzt_detail" isshow="no">
+        <rect left="1416.51" top="0" width="1920" height="4118" orientation="y" biaoshi="1150:1450;2560:400;1600:2800" fanyi="1302:4964:0:1400" fybs="1037:2490"/>
+      </img>
+      <img id="06_xylzt_detail_bs1" file="06_xylzt_detail_bs1.png" name="xylzt_detail_bs1" isshow="no">
+        <rect left="100" top="0" width="1200" height="954" />
+      </img>
+      <img id="06_xylzt_detail_bs2" file="06_xylzt_detail_bs2.png" name="xylzt_detail_bs2" isshow="no">
+        <rect left="100" top="0" width="904" height="954" />
+      </img>
+      <img id="06_xylzt_detail_bs3" file="06_xylzt_detail_bs3.png" name="xylzt_detail_bs3" isshow="no">
+        <rect left="-650" top="-350" width="636" height="954" />
+      </img>
+      <img id="06_xylzt_detail_bs1_rq1" file="06_xylzt_detail_bs1_rq1.png" name="xylzt_detail_bs1_rq1" isshow="no" show_file="yangzhoubaguai1.png:879:2160">
+        <rect left="480" top="82" width="63" height="214" />
+      </img>
+    </layer>
+    <layer id="7">
+      <img id="07_lsft_detail" file="07_洛神图.jpg" name="lsft_detail" isshow="no">
+        <rect left="-64000" top="0" width="41127" height="1080" orientation="x" biaoshi="70750:500;64450:900;66500:1000;63600:600"/>
+      </img>
+      <img id="07_lsft_detail_bs1" file="07_lsft_detail_bs1.png" name="lsft_detail_bs1" isshow="no">
+        <rect left="-1230" top="-100" width="1199" height="954" />
+      </img>
+      <img id="07_lsft_detail_bs2" file="07_lsft_detail_bs2.png" name="lsft_detail_bs2" isshow="no">
+        <rect left="100" top="-300" width="629" height="954" />
+      </img>
+      <img id="07_lsft_detail_bs3" file="07_lsft_detail_bs3.png" name="lsft_detail_bs3" isshow="no">
+        <rect left="-800" top="-300" width="762" height="954" />
+      </img>
+      <img id="07_lsft_detail_bs4" file="07_lsft_detail_bs4.png" name="lsft_detail_bs4" isshow="no">
+        <rect left="-950" top="-100" width="922" height="954" />
+      </img>
+      <img id="07_lsft_detail_bs3_rq1" file="07_lsft_detail_bs3_rq1.png" name="lsft_detail_bs3_rq1" isshow="no" show_file="hanxizaiyeyan.png:3840:454">
+        <rect left="-643" top="150" width="65" height="287" />
+      </img>
+      <img id="07_lsft_detail_bs4_rq1" file="07_lsft_detail_bs4_rq1.png" name="lsft_detail_bs4_rq1" isshow="no" show_file="youchuntu.png:3840:1587">
+        <rect left="-705" top="573" width="63" height="181" />
+      </img>
+    </layer>
+    <layer id="8">
+      <img id="08_yct_detail" file="08_游春图.jpg" name="yct_detail" isshow="no">
+        <rect left="-14500" top="0" width="9678" height="1080" orientation="x" biaoshi="15350:1450;17540:840;16800:300"/>
+      </img>
+      <img id="08_yct_detail_bs1" file="08_yct_detail_bs1.png" name="yct_detail_bs1" isshow="no">
+        <rect left="100" top="-450" width="928" height="954" />
+      </img>
+      <img id="08_yct_detail_bs2" file="08_yct_detail_bs2.png" name="yct_detail_bs2" isshow="no">
+        <rect left="-1215" top="-340" width="1139" height="954" />
+      </img>
+      <img id="08_yct_detail_bs3" file="08_yct_detail_bs3.png" name="yct_detail_bs3" isshow="no">
+        <rect left="-800" top="0" width="764" height="954" />
+      </img>
+      <img id="08_yct_detail_bs1_rq1" file="08_yct_detail_bs1_rq1.png" name="yct_detail_bs1_rq1" isshow="no" show_file="luoshentu.png:3840:333">
+        <rect left="350" top="-145" width="65" height="213" />
+      </img>
+      <img id="08_yct_detail_bs3_rq1" file="08_yct_detail_bs3_rq1.png" name="yct_detail_bs3_rq1" isshow="no" show_file="qianlijiangshan.png:3840:297">
+        <rect left="-640" top="527" width="65" height="259" />
+      </img>
+    </layer>
+    <layer id="9">
+      <img id="09_wnt_detail" file="09_五牛图.jpg" name="wnt_detail" isshow="no">
+        <rect left="-36400" top="0" width="26941" height="1080" orientation="x" biaoshi="40350:400;38850:550;37350:1300"/>
+      </img>
+      <img id="09_wnt_detail_bs1" file="09_wnt_detail_bs1.png" name="wnt_detail_bs1" isshow="no">
+        <rect left="100" top="-100" width="685" height="954" />
+      </img>
+      <img id="09_wnt_detail_bs2" file="09_wnt_detail_bs2.png" name="wnt_detail_bs2" isshow="no">
+        <rect left="100" top="-250" width="621" height="954" />
+      </img>
+      <img id="09_wnt_detail_bs3" file="09_wnt_detail_bs3.png" name="wnt_detail_bs3" isshow="no">
+        <rect left="100" top="-450" width="482" height="954" />
+      </img>
+    </layer>
+    <layer id="10">
+      <img id="10_cphqt_detail" file="10_重屏会棋图.jpg" name="cphqt_detail" isshow="no">
+        <rect left="-7700" top="0" width="5922" height="1080" orientation="x" biaoshi="9550:875;8350:450;8950:1150"/>
+      </img>
+      <img id="10_cphqt_detail_bs1" file="10_cphqt_detail_bs1.png" name="cphqt_detail_bs1" isshow="no">
+        <rect left="-875" top="-225" width="832" height="954" />
+      </img>
+      <img id="10_cphqt_detail_bs2" file="10_cphqt_detail_bs2.png" name="cphqt_detail_bs2" isshow="no">
+        <rect left="-815" top="-150" width="768" height="954" />
+      </img>
+      <img id="10_cphqt_detail_bs3" file="10_cphqt_detail_bs3.png" name="cphqt_detail_bs3" isshow="no">
+        <rect left="-715" top="-275" width="688" height="954" />
+      </img>
+      <img id="10_cphqt_detail_bs3_rq1" file="10_cphqt_detail_bs3_rq1.png" name="cphqt_detail_bs3_rq1" isshow="no" show_file="hanhuangwenyuan.png:3840:1961">
+        <rect left="-560" top="-193" width="63" height="181" />
+      </img>
+    </layer>
+    <layer id="11">
+      <img id="11_xxt_detail" file="11_潇湘图.jpg" name="xxt_detail" isshow="no">
+        <rect left="-16300" top="0" width="13815" height="1080" orientation="x" biaoshi="15820:260;12515:1175"/>
+      </img>
+      <img id="11_xxt_detail_bs1" file="11_xxt_detail_bs1.png" name="xxt_detail_bs1" isshow="no">
+        <rect left="-1260" top="0" width="1209" height="954" />
+      </img>
+      <img id="11_xxt_detail_bs2" file="11_xxt_detail_bs2.png" name="xxt_detail_bs2" isshow="no">
+        <rect left="125" top="-395" width="706" height="954" />
+      </img>
+      <img id="11_xxt_detail_bs2_rq1" file="11_xxt_detail_bs2_rq1.png" name="xxt_detail_bs2_rq1" isshow="no" show_file="仙山楼阁图.png:1111:2160">
+        <rect left="430" top="37" width="63" height="181" />
+      </img>
+    </layer>
+    <layer id="12">
+      <img id="12_gxt_detail" file="12_高士图.jpg" name="gxt_detail" isshow="no">
+        <rect left="1662.81" top="0" width="1920" height="8063" orientation="y" biaoshi="2100:8550;1820:7450;900:2020" fanyi="642:274:0:1900" fybs="500:1950"/>
+      </img>
+      <img id="12_gxt_detail_bs1" file="12_gxt_detail_bs1.png" name="gxt_detail_bs1" isshow="no">
+        <rect left="-950" top="-370" width="860" height="954" />
+      </img>
+      <img id="12_gxt_detail_bs2" file="12_gxt_detail_bs2.png" name="gxt_detail_bs2" isshow="no">
+        <rect left="130" top="-480" width="1025" height="954" />
+      </img>
+      <img id="12_gxt_detail_bs3" file="12_gxt_detail_bs3.png" name="gxt_detail_bs3" isshow="no">
+        <rect left="130" top="-370" width="790" height="954" />
+      </img>
+      <img id="12_gxt_detail_bs2_rq1" file="12_gxt_detail_bs2_rq1.png" name="gxt_detail_bs2_rq1" isshow="no" show_file="汉宫秋月图.png:1347:2160">
+        <rect left="246" top="-265" width="63" height="156" />
+      </img>
+    </layer>
+    <layer id="13">
+      <img id="13_kspyt_detail" file="13_窠石平远图.jpg" name="kspyt_detail" isshow="no">
+        <rect left="562.27" top="0" width="1920" height="1527" orientation="y" biaoshi="45:1525;2650:2040;2915:1400" fanyi="144:401:0:1400" fybs="100:1425"/>
+      </img>
+      <img id="13_kspyt_detail_bs1" file="13_kspyt_detail_bs1.png" name="kspyt_detail_bs1" isshow="no">
+        <rect left="130" top="-450" width="1081" height="954" />
+      </img>
+      <img id="13_kspyt_detail_bs2" file="13_kspyt_detail_bs2.png" name="kspyt_detail_bs2" isshow="no">
+        <rect left="130" top="-415" width="933" height="954" />
+      </img>
+      <img id="13_kspyt_detail_bs3" file="13_kspyt_detail_bs3.png" name="kspyt_detail_bs3" isshow="no">
+        <rect left="-815" top="-450" width="768" height="954" />
+      </img>
+      <img id="13_kspyt_detail_bs2_rq1" file="13_kspyt_detail_bs2_rq1.png" name="kspyt_detail_bs2_rq1" isshow="no" show_file="秋庭嘉树图.png:820:2160">
+        <rect left="297" top="-322" width="65" height="403" />
+      </img>
+    </layer>
+    <layer id="14">
+      <img id="14_qljst_detail" file="14_千里江山图.jpg" name="qljst_detail" isshow="no">
+        <rect left="-2540" top="0" width="26973" height="1080" orientation="x" biaoshi="2430:500;6900:810;13700:1700" fanyi="637:1440:1900:500" fybs="1900:600"/>
+      </img>
+      <img id="14_qljst_detail_bs1" file="14_qljst_detail_bs1.png" name="qljst_detail_bs1" isshow="no">
+        <rect left="130" top="-150" width="1290" height="954" />
+      </img>
+      <img id="14_qljst_detail_bs2" file="14_qljst_detail_bs2.png" name="qljst_detail_bs2" isshow="no">
+        <rect left="130" top="-460" width="929" height="954" />
+      </img>
+      <img id="14_qljst_detail_bs3" file="14_qljst_detail_bs3.png" name="qljst_detail_bs3" isshow="no">
+        <rect left="-815" top="-890" width="929" height="954" />
+      </img>
+      <img id="14_qljst_detail_bs3_rq1" file="14_qljst_detail_bs3_rq1.png" name="qljst_detail_bs3_rq1" isshow="no" show_file="游春图.png:3840:1428">
+        <rect left="-436" top="-313" width="63" height="181" />
+      </img>
+    </layer>
+    <layer id="15">
+      <img id="15_cwt_detail" file="15_采薇图.jpg" name="cwt_detail" isshow="no">
+        <rect left="-49400" top="0" width="30731" height="1080" orientation="x" biaoshi="48920:1330;51550:550" fanyi="194:294:48900:1100" fybs="49050:1100"/>
+      </img>
+      <img id="15_cwt_detail_bs1" file="15_cwt_detail_bs1.png" name="cwt_detail_bs1" isshow="no">
+        <rect left="-1195" top="-480" width="1151" height="954" />
+      </img>
+      <img id="15_cwt_detail_bs2" file="15_cwt_detail_bs2.png" name="cwt_detail_bs2" isshow="no">
+        <rect left="130" top="-300" width="992" height="954" />
+      </img>
+      <img id="15_cwt_detail_bs1_rq1" file="15_cwt_detail_bs1_rq1.png" name="cwt_detail_bs1_rq1" isshow="no" show_file="秋郊饮马图.png:3840:650">
+        <rect left="-882" top="-263" width="63" height="181" />
+      </img>
+      <img id="15_cwt_detail_bs1_rq2" file="15_cwt_detail_bs1_rq2.png" name="cwt_detail_bs1_rq2" isshow="no" show_file="踏歌图.png:1520:2160">
+        <rect left="-882" top="-10" width="63" height="156" />
+      </img>
+    </layer>
+    <layer id="16">
+      <img id="16_tgt_detail" file="16_踏歌图.jpg" name="tgt_detail" isshow="no">
+        <rect left="1288.38" top="0" width="1920" height="3283" orientation="y" biaoshi="2350:250;1950:5750;1700:4870;1650:4215" fanyi="1261:1195:1200:0" fybs="2350:950"/>
+      </img>
+      <img id="16_tgt_detail_bs1" file="16_tgt_detail_bs1.png" name="tgt_detail_bs1" isshow="no">
+        <rect left="130" top="0" width="1147" height="954" />
+      </img>
+      <img id="16_tgt_detail_bs2" file="16_tgt_detail_bs2.png" name="tgt_detail_bs2" isshow="no">
+        <rect left="-1050" top="-600" width="1004" height="954" />
+      </img>
+      <img id="16_tgt_detail_bs3" file="16_tgt_detail_bs3.png" name="tgt_detail_bs3" isshow="no">
+        <rect left="130" top="-570" width="564" height="954" />
+      </img>
+      <img id="16_tgt_detail_bs4" file="16_tgt_detail_bs4.png" name="tgt_detail_bs4" isshow="no">
+        <rect left="130" top="-515" width="507" height="954" />
+      </img>
+    </layer>
+    <layer id="17">
+      <img id="17_tqt_detail" file="17_听琴图.jpg" name="tqt_detail" isshow="no">
+        <rect left="1505.5" top="0" width="1920" height="5003" orientation="y" biaoshi="2430:875;2075:6000;1200:4250" fanyi="1633:1598:1000:800" fybs="2430:2130"/>
+      </img>
+      <img id="17_tqt_detail_bs1" file="17_tqt_detail_bs1.png" name="tqt_detail_bs1" isshow="no">
+        <rect left="130" top="-375" width="1078" height="954" />
+      </img>
+      <img id="17_tqt_detail_bs2" file="17_tqt_detail_bs2.png" name="tqt_detail_bs2" isshow="no">
+        <rect left="-875" top="-300" width="791" height="954" />
+      </img>
+      <img id="17_tqt_detail_bs3" file="17_tqt_detail_bs3.png" name="tqt_detail_bs3" isshow="no">
+        <rect left="-755" top="-500" width="705" height="954" />
+      </img>
+      <img id="17_tqt_detail_bs2_rq1" file="17_tqt_detail_bs2_rq1.png" name="tqt_detail_bs2_rq1" isshow="no" show_file="步辇图.png:3840:1150">
+        <rect left="-487" top="137" width="63" height="181" />
+      </img>
+    </layer>
+    <layer id="18">
+      <img id="18_fwymft_detail" file="18_仿韦偃牧放图.jpg" name="fwymft_detail" isshow="no">
+        <rect left="-21600" top="0" width="14100" height="1080" orientation="x" biaoshi="25330:475;19900:1050;13750:1050" fanyi="206:487:25300:0" fybs="25473:245"/>
+      </img>
+      <img id="18_fwymft_detail_bs1" file="18_fwymft_detail_bs1.png" name="fwymft_detail_bs1" isshow="no">
+        <rect left="-1130" top="-145" width="1078" height="954" />
+      </img>
+      <img id="18_fwymft_detail_bs2" file="18_fwymft_detail_bs2.png" name="fwymft_detail_bs2" isshow="no">
+        <rect left="130" top="-450" width="930" height="954" />
+      </img>
+      <img id="18_fwymft_detail_bs3" file="18_fwymft_detail_bs3.png" name="fwymft_detail_bs3" isshow="no">
+        <rect left="130" top="-450" width="708" height="954" />
+      </img>
+      <img id="18_fwymft_detail_bs3_rq1" file="18_fwymft_detail_bs3_rq1.png" name="fwymft_detail_bs3_rq1" isshow="no" show_file="秋郊饮马图2.png:3840:1273">
+        <rect left="577" top="-356" width="63" height="123" />
+      </img>
+    </layer>
+    <layer id="19">
+      <img id="19_qjymt_detail" file="19_秋郊饮马图.jpg" name="qjymt_detail" isshow="no">
+        <rect left="-18400" top="0" width="15064" height="1080" orientation="x" biaoshi="17050:800;21050:1050;18250:350" fanyi="148:771:17000:0;124:550:22200:0" fybs="17150:350;22325:250"/>
+      </img>
+      <img id="19_qjymt_detail_bs1" file="19_qjymt_detail_bs1.png" name="qjymt_detail_bs1" isshow="no">
+        <rect left="-970" top="-450" width="930" height="954" />
+      </img>
+      <img id="19_qjymt_detail_bs2" file="19_qjymt_detail_bs2.png" name="qjymt_detail_bs2" isshow="no">
+        <rect left="-1000" top="-450" width="930" height="954" />
+      </img>
+      <img id="19_qjymt_detail_bs3" file="19_qjymt_detail_bs3.png" name="qjymt_detail_bs3" isshow="no">
+        <rect left="-840" top="0" width="793" height="954" />
+      </img>
+      <img id="19_qjymt_detail_bs2_rq1" file="19_qjymt_detail_bs2_rq1.png" name="qjymt_detail_bs2_rq1" isshow="no" show_file="步辇图.png:3840:1150">
+        <rect left="-474" top="-355" width="63" height="156" />
+      </img>
+    </layer>
+    <layer id="20">
+      <img id="20_qtjst_detail" file="20_秋亭嘉树图.jpg" name="qtjst_detail" isshow="no">
+        <rect left="1643.39" top="0" width="1920" height="7496" orientation="y" biaoshi="2280:3750;2280:6400;1450:13750;1450:9500" fanyi="1840:3003:2000:2600" fybs="2070:2730"/>
+      </img>
+      <img id="20_qtjst_detail_bs1" file="20_qtjst_detail_bs1.png" name="qtjst_detail_bs1" isshow="no">
+        <rect left="-1055" top="-400" width="1007" height="954" />
+      </img>
+      <img id="20_qtjst_detail_bs2" file="20_qtjst_detail_bs2.png" name="qtjst_detail_bs2" isshow="no">
+        <rect left="130" top="-450" width="712" height="954" />
+      </img>
+      <img id="20_qtjst_detail_bs3" file="20_qtjst_detail_bs3.png" name="qtjst_detail_bs3" isshow="no">
+        <rect left="130" top="-550" width="567" height="954" />
+      </img>
+      <img id="20_qtjst_detail_bs4" file="20_qtjst_detail_bs4.png" name="qtjst_detail_bs4" isshow="no">
+        <rect left="130" top="-450" width="567" height="954" />
+      </img>
+      <img id="20_qtjst_detail_bs3_rq1" file="20_qtjst_detail_bs3_rq1.png" name="qtjst_detail_bs3_rq1" isshow="no" show_file="幽亭秀木图.png:1691:2160">
+        <rect left="297" top="-84" width="57" height="397" />
+      </img>
+    </layer>
+    <layer id="21">
+      <img id="21_xhsqft_detail" file="21_兴化寺七佛图壁画.jpg" name="xhsqft_detail" isshow="no">
+        <rect left="-4300" top="0" width="6006" height="1080" orientation="x" biaoshi="6300:400;7025:700;9520:400"/>
+      </img>
+      <img id="21_xhsqft_detail_bs1" file="21_xhsqft_detail_bs1.png" name="xhsqft_detail_bs1" isshow="no">
+        <rect left="130" top="-150" width="990" height="954" />
+      </img>
+      <img id="21_xhsqft_detail_bs2" file="21_xhsqft_detail_bs2.png" name="xhsqft_detail_bs2" isshow="no">
+        <rect left="130" top="-300" width="579" height="954" />
+      </img>
+      <img id="21_xhsqft_detail_bs3" file="21_xhsqft_detail_bs3.png" name="xhsqft_detail_bs3" isshow="no">
+        <rect left="130" top="-150" width="784" height="954" />
+      </img>
+    </layer>
+    <layer id="22">
+      <img id="22_zht_detail" file="22_竹鹤图.jpg" name="zht_detail" isshow="no">
+        <rect left="1224.43" top="0" width="1920" height="2981" orientation="y" biaoshi="3750:4770;1850:1550;1675:700" fanyi="90:527:3750:4900" fybs="3750:4875"/>
+      </img>
+      <img id="22_zht_detail_bs1" file="22_zht_detail_bs1.png" name="zht_detail_bs1" isshow="no">
+        <rect left="-1300" top="-720" width="1209" height="954" />
+      </img>
+      <img id="22_zht_detail_bs2" file="22_zht_detail_bs2.png" name="zht_detail_bs2" isshow="no">
+        <rect left="-775" top="0" width="706" height="954" />
+      </img>
+      <img id="22_zht_detail_bs3" file="22_zht_detail_bs3.png" name="zht_detail_bs3" isshow="no">
+        <rect left="130" top="-250" width="508" height="954" />
+      </img>
+      <img id="22_zht_detail_bs1_rq1" file="22_zht_detail_bs1_rq1.png" name="zht_detail_bs1_rq1" isshow="no" show_file="写生珍禽图.png:3840:1587">
+        <rect left="-68" top="-280" width="73" height="268" />
+      </img>
+    </layer>
+    <layer id="23">
+      <img id="23_zkyyt_detail" file="23_钟馗夜游图.jpg" name="zkyyt_detail" isshow="no">
+        <rect left="1252.79" top="0" width="1920" height="3108" orientation="y" biaoshi="125:2925;2100:2950;2450:3750" fanyi="239:315:0:3000" fybs="190:3020"/>
+      </img>
+      <img id="23_zkyyt_detail_bs1" file="23_zkyyt_detail_bs1.png" name="zkyyt_detail_bs1" isshow="no">
+        <rect left="130" top="-575" width="1025" height="954" />
+      </img>
+      <img id="23_zkyyt_detail_bs2" file="23_zkyyt_detail_bs2.png" name="zkyyt_detail_bs2" isshow="no">
+        <rect left="130" top="0" width="1155" height="954" />
+      </img>
+      <img id="23_zkyyt_detail_bs3" file="23_zkyyt_detail_bs3.png" name="zkyyt_detail_bs3" isshow="no">
+        <rect left="-875" top="-300" width="809" height="954" />
+      </img>
+      <img id="23_zkyyt_detail_bs1_rq1" file="23_zkyyt_detail_bs1_rq1.png" name="zkyyt_detail_bs1_rq1" isshow="no" show_file="踏歌图.png:1520:2160">
+        <rect left="458" top="-310" width="65" height="292" />
+      </img>
+    </layer>
+    <layer id="24">
+      <img id="24_wlct_detail" file="24_武陵春图.jpg" name="wlct_detail" isshow="no">
+        <rect left="-29300" top="0" width="21222" height="1080" orientation="x" biaoshi="33750:1325;30725:950;31750:350"/>
+      </img>
+      <img id="24_wlct_detail_bs1" file="24_wlct_detail_bs1.png" name="wlct_detail_bs1" isshow="no">
+        <rect left="-1375" top="-375" width="1290" height="954" />
+      </img>
+      <img id="24_wlct_detail_bs2" file="24_wlct_detail_bs2.png" name="wlct_detail_bs2" isshow="no">
+        <rect left="-1425" top="-200" width="1383" height="954" />
+      </img>
+      <img id="24_wlct_detail_bs3" file="24_wlct_detail_bs3.png" name="wlct_detail_bs3" isshow="no">
+        <rect left="-1000" top="-100" width="934" height="954" />
+      </img>
+      <img id="24_wlct_detail_bs2_rq1" file="24_wlct_detail_bs2_rq1.png" name="wlct_detail_bs2_rq1" isshow="no" show_file="王蜀宫妓图.png:1335:2160">
+        <rect left="-300" top="55" width="65" height="292" />
+      </img>
+    </layer>
+    <layer id="25">
+      <img id="25_ltxxt_detail" file="25_兰亭修褉图.jpg" name="ltxxt_detail" isshow="no">
+        <rect left="-31400" top="0" width="18219" height="1080" orientation="x" biaoshi="22350:250;33600:1650;32150:450" fanyi="3594:2160:19000:0" fybs="22350:1300"/>
+      </img>
+      <img id="25_ltxxt_detail_bs1" file="25_ltxxt_detail_bs1.png" name="ltxxt_detail_bs1" isshow="no">
+        <rect left="130" top="0" width="1016" height="954" />
+      </img>
+      <img id="25_ltxxt_detail_bs2" file="25_ltxxt_detail_bs2.png" name="ltxxt_detail_bs2" isshow="no">
+        <rect left="130" top="-800" width="1086" height="954" />
+      </img>
+      <img id="25_ltxxt_detail_bs3" file="25_ltxxt_detail_bs3.png" name="ltxxt_detail_bs3" isshow="no">
+        <rect left="130" top="-250" width="847" height="954" />
+      </img>
+      <img id="25_ltxxt_detail_bs1_rq1" file="25_ltxxt_detail_bs1_rq1.png" name="ltxxt_detail_bs1_rq1" isshow="no" show_file="乔木慈鸟图.png:960:2160">
+        <rect left="815" top="220" width="63" height="156" />
+      </img>
+      <img id="25_ltxxt_detail_bs1_rq2" file="25_ltxxt_detail_bs1_rq2.png" name="ltxxt_detail_bs1_rq2" isshow="no" show_file="王蜀宫妓图.png:1335:2160">
+        <rect left="815" top="435" width="63" height="156" />
+      </img>
+      <img id="25_ltxxt_detail_bs1_rq3" file="25_ltxxt_detail_bs1_rq3.png" name="ltxxt_detail_bs1_rq3" isshow="no" show_file="仇英人物故事册1.png:3709:2160">
+        <rect left="815" top="650" width="63" height="156" />
+      </img>
+      <img id="25_ltxxt_detail_bs3_rq1" file="25_ltxxt_detail_bs3_rq1.png" name="ltxxt_detail_bs3_rq1" isshow="no" show_file="千里江山图.png:3840:293">
+        <rect left="650" top="400" width="65" height="265" />
+      </img>
+    </layer>
+    <layer id="26">
+      <img id="26_wsgjt_detail" file="26_王蜀宫妓图.jpg" name="wsgjt_detail" isshow="no">
+        <rect left="1376.5" top="0" width="1920" height="3815" orientation="y" biaoshi="1700:1350;1025:3400;2275:4550" fanyi="1635:1771:1600:1100" fybs="1600:1450"/>
+      </img>
+      <img id="26_wsgjt_detail_bs1" file="26_wsgjt_detail_bs1.png" name="wsgjt_detail_bs1" isshow="no">
+        <rect left="-1425" top="0" width="1359" height="954" />
+      </img>
+      <img id="26_wsgjt_detail_bs2" file="26_wsgjt_detail_bs2.png" name="wsgjt_detail_bs2" isshow="no">
+        <rect left="-850" top="-150" width="809" height="954" />
+      </img>
+      <img id="26_wsgjt_detail_bs3" file="26_wsgjt_detail_bs3.png" name="wsgjt_detail_bs3" isshow="no">
+        <rect left="130" top="-650" width="809" height="954" />
+      </img>
+    </layer>
+    <layer id="27">
+      <img id="27_yxt_detail" file="27_婴戏图.jpg" name="yxt_detail" isshow="no">
+        <rect left="1419.47" top="0" width="1920" height="4143" orientation="y" biaoshi="3300:1950;2500:5825;675:5425" fanyi="184:1649:3250:2000" fybs="3450:2750"/>
+      </img>
+      <img id="27_yxt_detail_bs1" file="27_yxt_detail_bs1.png" name="yxt_detail_bs1" isshow="no">
+        <rect left="-1150" top="0" width="1067" height="954" />
+      </img>
+      <img id="27_yxt_detail_bs2" file="27_yxt_detail_bs2.png" name="yxt_detail_bs2" isshow="no">
+        <rect left="130" top="-125" width="720" height="954" />
+      </img>
+      <img id="27_yxt_detail_bs3" file="27_yxt_detail_bs3.png" name="yxt_detail_bs3" isshow="no">
+        <rect left="130" top="-175" width="720" height="954" />
+      </img>
+      <img id="27_yxt_detail_bs1_rq1" file="27_yxt_detail_bs1_rq1.png" name="yxt_detail_bs1_rq1" isshow="no" show_file="伯乐相马图.png:914:2160">
+        <rect left="-1040" top="450" width="65" height="403" />
+      </img>
+    </layer>
+    <layer id="28">
+      <img id="28_sjqfdcg_detail" file="28_搜尽奇峰图.jpg" name="sjqfdcg_detail" isshow="no">
+        <rect left="-12200" top="0" width="15415" height="1080" orientation="x" biaoshi="24550:975;19500:350" fanyi="1461:2160:10600:0;246:1037:24500:0" fybs="12000:220;24700:450"/>
+      </img>
+      <img id="28_sjqfdcg_detail_bs1" file="28_sjqfdcg_detail_bs1.png" name="sjqfdcg_detail_bs1" isshow="no">
+        <rect left="-1300" top="-625" width="1227" height="954" />
+      </img>
+      <img id="28_sjqfdcg_detail_bs2" file="28_sjqfdcg_detail_bs2.png" name="sjqfdcg_detail_bs2" isshow="no">
+        <rect left="130" top="0" width="563" height="954" />
+      </img>
+      <img id="28_sjqfdcg_detail_bs1_rq1" file="28_sjqfdcg_detail_bs1_rq1.png" name="sjqfdcg_detail_bs1_rq1" isshow="no" show_file="猫石图.png:3840:595">
+        <rect left="-618" top="-531" width="63" height="156" />
+      </img>
+      <img id="28_sjqfdcg_detail_bs1_rq2" file="28_sjqfdcg_detail_bs1_rq2.png" name="sjqfdcg_detail_bs1_rq2" isshow="no" show_file="王蜀宫妓图.png:1335:2160">
+        <rect left="-618" top="-315" width="63" height="156" />
+      </img>
+      <img id="28_sjqfdcg_detail_bs1_rq3" file="28_sjqfdcg_detail_bs1_rq3.png" name="sjqfdcg_detail_bs1_rq3" isshow="no" show_file="幽亭秀木图.png:1691:2160">
+        <rect left="-618" top="-99" width="63" height="156" />
+      </img>
+    </layer>
+    <layer id="29">
+      <img id="29_pacxt_detail" file="29_平安春信图.jpg" name="pacxt_detail" isshow="no">
+        <rect left="1283.14" top="0" width="1920" height="3256" orientation="y" biaoshi="2560:1600;2250:3400;1050:4350" fanyi="615:1029:2500:1550" fybs="3075:2050"/>
+      </img>
+      <img id="29_pacxt_detail_bs1" file="29_pacxt_detail_bs1.png" name="pacxt_detail_bs1" isshow="no">
+        <rect left="-810" top="0" width="785" height="954" />
+      </img>
+      <img id="29_pacxt_detail_bs2" file="29_pacxt_detail_bs2.png" name="pacxt_detail_bs2" isshow="no">
+        <rect left="130" top="0" width="1012" height="954" />
+      </img>
+      <img id="29_pacxt_detail_bs3" file="29_pacxt_detail_bs3.png" name="pacxt_detail_bs3" isshow="no">
+        <rect left="130" top="0" width="793" height="954" />
+      </img>
+      <img id="29_pacxt_detail_bs3_rq1" file="29_pacxt_detail_bs3_rq1.png" name="pacxt_detail_bs3_rq1" isshow="no" show_file="竹鹤图.png:1653:2160">
+        <rect left="665" top="400" width="65" height="240" />
+      </img>
+    </layer>
+    
+    <layer id="30">
+      <img id="30_伯远帖_detail" file="30_伯远帖.jpg" name="伯远帖_detail" isshow="no" isshufa="yes">
+        <rect left="-24210" top="0" width="16533" height="1080" orientation="x" />
+      </img>
+      <img id="30_伯远帖_detail_翻译" file="30_伯远帖_翻译.jpg" name="伯远帖_detail_翻译" isshow="no">
+        <rect left="-24210" top="0" width="16533" height="1080" orientation="x" />
+      </img>
+    </layer>
+    <layer id="31">
+      <img id="31_平复帖_detail" file="31_平复帖.jpg" name="平复帖_detail" isshow="no" isshufa="yes">
+        <rect left="-23305" top="0" width="16951.5" height="1080" orientation="x" />
+      </img>
+      <img id="31_平复帖_detail_翻译" file="31_平复帖_翻译.jpg" name="平复帖_detail_翻译" isshow="no">
+        <rect left="-23305" top="0" width="16951.5" height="1080" orientation="x" />
+      </img>
+    </layer>
+    <layer id="32">
+      <img id="32_苕溪诗_detail" file="32_苕溪诗.jpg" name="苕溪诗_detail" isshow="no" isshufa="yes">
+        <rect left="-24850" top="0" width="14635" height="1080" orientation="x" />
+      </img>
+      <img id="32_苕溪诗_detail_翻译" file="32_苕溪诗_翻译.jpg" name="苕溪诗_detail_翻译" isshow="no">
+        <rect left="-24850" top="0" width="14635" height="1080" orientation="x" />
+      </img>
+    </layer>
+    <layer id="33">
+      <img id="33_诸上座帖_detail" file="33_诸上座帖.jpg" name="诸上座帖_detail" isshow="no" isshufa="yes">
+        <rect left="-43960" top="0" width="24196" height="1080" orientation="x" />
+      </img>
+      <img id="33_诸上座帖_detail_翻译" file="33_诸上座帖_翻译.jpg" name="诸上座帖_detail_翻译" isshow="no">
+        <rect left="-43960" top="0" width="24196" height="1080" orientation="x" />
+      </img>
+    </layer>
+    <layer id="34">
+      <img id="34_草书千字文_detail" file="34_草书千字文.jpg" name="草书千字文_detail" isshow="no" isshufa="yes">
+        <rect left="-41800" top="0" width="23225.5" height="1080" orientation="x" />
+      </img>
+      <img id="34_草书千字文_detail_翻译" file="34_草书千字文_翻译.jpg" name="草书千字文_detail_翻译" isshow="no">
+        <rect left="-41800" top="0" width="23225.5" height="1080" orientation="x" />
+      </img>
+    </layer>
+    <layer id="35">
+      <img id="35_史颂鼎铭_detail" file="35_史颂鼎铭.jpg" name="史颂鼎铭_detail" isshow="no" isshufa="yes">
+        <rect left="1659.6" top="0" width="1920" height="7963" orientation="y" />
+      </img>
+      <img id="35_史颂鼎铭_detail_翻译" file="35_史颂鼎铭_翻译.jpg" name="史颂鼎铭_detail_翻译" isshow="no">
+        <rect left="1659.6" top="0" width="1920" height="7963" orientation="y" />
+      </img>
+    </layer>
+    <layer id="36">
+      <img id="36_冯摹兰亭序_detail" file="36_冯摹兰亭序.jpg" name="冯摹兰亭序_detail" isshow="no" isshufa="yes">
+        <rect left="-37760" top="0" width="24581" height="1080" orientation="x" />
+      </img>
+      <img id="36_冯摹兰亭序_detail_翻译" file="36_冯摹兰亭序_翻译.jpg" name="冯摹兰亭序_detail_翻译" isshow="no">
+        <rect left="-37760" top="0" width="24581" height="1080" orientation="x" />
+      </img>
+    </layer>
+    <layer id="37">
+      <img id="37_张好好诗_detail" file="37_张好好诗.jpg" name="张好好诗_detail" isshow="no" isshufa="yes">
+        <rect left="-21800" top="0" width="13153" height="1080" orientation="x" />
+      </img>
+      <img id="37_张好好诗_detail_翻译" file="37_张好好诗_翻译.jpg" name="张好好诗_detail_翻译" isshow="no">
+        <rect left="-21800" top="0" width="13153" height="1080" orientation="x" />
+      </img>
+    </layer>
+    <layer id="38">
+      <img id="38_四箴四条屏1_detail" file="38_四箴四条屏1.jpg" name="四箴四条屏1_detail" isshow="no" isshufa="yes">
+        <rect left="1549.38" top="0" width="1920" height="5595" orientation="y" />
+      </img>
+      <img id="38_四箴四条屏1_detail_翻译" file="38_四箴四条屏1_翻译.jpg" name="四箴四条屏1_detail_翻译" isshow="no">
+        <rect left="1549.38" top="0" width="1920" height="5595" orientation="y" />
+      </img>
+      <img id="38_四箴四条屏2_detail" file="38_四箴四条屏2.jpg" name="四箴四条屏2_detail" isshow="no" isshufa="yes">
+        <rect left="1557.23" top="0" width="1920" height="5716" orientation="y" />
+      </img>
+      <img id="38_四箴四条屏2_detail_翻译" file="38_四箴四条屏2_翻译.jpg" name="四箴四条屏2_detail_翻译" isshow="no">
+        <rect left="1557.23" top="0" width="1920" height="5716" orientation="y" />
+      </img>
+    </layer>
+    <layer id="39">
+      <img id="39_许氏说文叙1_detail" file="39_许氏说文叙1.jpg" name="许氏说文叙1_detail" isshow="no" isshufa="yes">
+        <rect left="24.71" top="0" width="1920" height="1094" orientation="y" />
+      </img>
+      <img id="39_许氏说文叙1_detail_翻译" file="39_许氏说文叙1_翻译.jpg" name="许氏说文叙1_detail_翻译" isshow="no">
+        <rect left="24.71" top="0" width="1920" height="1094" orientation="y" />
+      </img>
+      <img id="39_许氏说文叙2_detail" file="39_许氏说文叙2.jpg" name="许氏说文叙2_detail" isshow="no" isshufa="yes">
+        <rect left="0" top="0" width="1934" height="1080" orientation="x" />
+      </img>
+      <img id="39_许氏说文叙2_detail_翻译" file="39_许氏说文叙2_翻译.jpg" name="许氏说文叙2_detail_翻译" isshow="no">
+        <rect left="0" top="0" width="1934" height="1080" orientation="x" />
+      </img>
+      <img id="39_许氏说文叙3_detail" file="39_许氏说文叙3.jpg" name="许氏说文叙3_detail" isshow="no" isshufa="yes">
+        <rect left="0" top="0" width="1920" height="1080" orientation="y" />
+      </img>
+      <img id="39_许氏说文叙3_detail_翻译" file="39_许氏说文叙3_翻译.jpg" name="许氏说文叙3_detail_翻译" isshow="no">
+        <rect left="0" top="0" width="1920" height="1080" orientation="y" />
+      </img>
+      <img id="39_许氏说文叙4_detail" file="39_许氏说文叙4.jpg" name="许氏说文叙4_detail" isshow="no" isshufa="yes">
+        <rect left="-30" top="0" width="1945" height="1080" orientation="x" />
+      </img>
+      <img id="39_许氏说文叙4_detail_翻译" file="39_许氏说文叙4_翻译.jpg" name="许氏说文叙4_detail_翻译" isshow="no">
+        <rect left="-30" top="0" width="1945" height="1080" orientation="x" />
+      </img>
+      <img id="39_许氏说文叙5_detail" file="39_许氏说文叙5.jpg" name="许氏说文叙5_detail" isshow="no" isshufa="yes">
+        <rect left="-38" top="0" width="1966" height="1080" orientation="x" />
+      </img>
+      <img id="39_许氏说文叙5_detail_翻译" file="39_许氏说文叙5_翻译.jpg" name="许氏说文叙5_detail_翻译" isshow="no">
+        <rect left="-38" top="0" width="1966" height="1080" orientation="x" />
+      </img>
+      <img id="39_许氏说文叙6_detail" file="39_许氏说文叙6.jpg" name="许氏说文叙6_detail" isshow="no" isshufa="yes">
+        <rect left="-38" top="0" width="1953" height="1080" orientation="x" />
+      </img>
+      <img id="39_许氏说文叙6_detail_翻译" file="39_许氏说文叙6_翻译.jpg" name="许氏说文叙6_detail_翻译" isshow="no">
+        <rect left="-38" top="0" width="1953" height="1080" orientation="x" />
+      </img>
+      <img id="39_许氏说文叙7_detail" file="39_许氏说文叙7.jpg" name="许氏说文叙7_detail" isshow="no" isshufa="yes">
+        <rect left="0.68" top="0" width="1920" height="1080" orientation="y" />
+      </img>
+      <img id="39_许氏说文叙7_detail_翻译" file="39_许氏说文叙7_翻译.jpg" name="许氏说文叙7_detail_翻译" isshow="no">
+        <rect left="0.68" top="0" width="1920" height="1080" orientation="y" />
+      </img>
+      <img id="39_许氏说文叙8_detail" file="39_许氏说文叙8.jpg" name="许氏说文叙8_detail" isshow="no" isshufa="yes">
+        <rect left="-12" top="0" width="1931" height="1080" orientation="x" />
+      </img>
+      <img id="39_许氏说文叙8_detail_翻译" file="39_许氏说文叙8_翻译.jpg" name="许氏说文叙8_detail_翻译" isshow="no">
+        <rect left="-12" top="0" width="1931" height="1080" orientation="x" />
+      </img>
+    </layer>
+    <layer id="40">
+      <img id="40_急就章_detail" file="40_急就章.jpg" name="急就章_detail" isshow="no" isshufa="yes">
+        <rect left="-46660" top="0" width="32187" height="1080" orientation="x" />
+      </img>
+      <img id="40_急就章_detail_翻译" file="40_急就章_翻译.jpg" name="急就章_detail_翻译" isshow="no">
+        <rect left="-46660" top="0" width="32187" height="1080" orientation="x" />
+      </img>
+    </layer>
+  </scene>
 </motion>
