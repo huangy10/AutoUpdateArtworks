@@ -78,7 +78,7 @@ class MotionXMLManger(object):
             "file": os.path.join(conf.daily_image_folder, os.path.basename(artwork.get_thumbnail_path())),
             "name": artwork.artwork_name,
             "isshow": "yes",
-            "detail_id": "%s_detail" % artwork.id,
+            "detail_id": "%s_img_detail" % artwork.id,
             "img_state": "1"
         })
         layout_rect = ET.Element("rect", default_list_layout.layout_rect_for_id(artwork.id))
@@ -90,10 +90,10 @@ class MotionXMLManger(object):
     def build_node_for_detail_from_artwork(self, artwork):
         layer = ET.Element("layer", {"id": "%s" % artwork.id})
         img = ET.Element("img", {
-            "id": "%s_detail" % artwork.id,
+            "id": "%s_img_detail" % artwork.id,
             "file": os.path.join(conf.daily_image_folder, artwork.image_name),
             "name": artwork.artwork_name,
-            "isshow": "yes"
+            "isshow": "no"
         })
         # calculate layout
         print artwork.get_detail_path()

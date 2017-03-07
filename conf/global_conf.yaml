@@ -1,5 +1,5 @@
 global:
-  U_disk_name: E
+  U_disk_name: D
   daily_image_folder: daily_image
   image_folder_name: images
   image_formats:
@@ -9,13 +9,15 @@ global:
 history:
 - 树林_卷_作者_朝代1
 - 武士_卷_作者_朝代8
-- 测试图片_卷_作者_战国
-- 测试图片_卷_作者_朝代2
-- 测试图片_卷_作者_朝代3
-- 测试图片_卷_作者_朝代4
+- 巴拉巴拉_卷_作者_战国
+- 和啊哈_卷_作者_朝代2
+- 乱七八糟_卷_作者_朝代3
+- 什么鬼片_卷_作者_朝代4
 - 测试图片_卷_作者_朝代5
-- 测试图片_卷_作者_朝代6
-- 测试图片_卷_作者_朝代7
+- 单片机_卷_作者_朝代6
+- 是太牛叉_卷_作者_朝代7
+- 仿韦偃牧放图_卷_作者_清
+- 王蜀宫妓图_卷_作者_朝代
 status:
   busy: false
   history_valid: true
